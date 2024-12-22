@@ -223,10 +223,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 76137603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f41f55c4b5807b749aa89e033c9f198e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6eb3d2c8cb63b9c48bb0e919fe907b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: mainHall
+  gameover: gameover
+  victory: victory
+  hall: mainHall
+  manager: {fileID: 1771925408}
 --- !u!1 &151807642
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,11 +15,23 @@ public class DwellerManager : MonoBehaviour
     private List<string> dwellersNames; // List of all dwellers
     [SerializeField] private GameObject playerDweller;  // The player's dweller
 
-
     [SerializeField] public string playerVote;   // To store the player's vote
     private bool hasPlayerVoted = false; // Flag to ensure the player votes first
     [SerializeField] public string mostVoted;
     public Dictionary<string, int> voteCounts = new Dictionary<string, int>();
+
+    private static int playersAlive = 6;
+
+
+    public int getPlayersAlive()
+    {
+        return playersAlive;
+    }
+
+    public GameObject getPlayer()
+    {
+        return playerDweller;
+    }
 
     public List<GameObject> getDwellers()
     {
@@ -165,6 +177,7 @@ public class DwellerManager : MonoBehaviour
         }
         Debug.Log(verdict);
         DwellerLogic.dwellersByName[mostVoted].GetComponent<DwellerLogic>().getDweller().isAlive = false;
+        playersAlive--;
     }
 
     public void bar()
