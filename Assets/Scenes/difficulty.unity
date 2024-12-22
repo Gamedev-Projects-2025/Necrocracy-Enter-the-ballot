@@ -214,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 781228629}
+        m_TargetAssemblyTypeName: ChangeReputation, Assembly-CSharp
+        m_MethodName: setRep
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &71141722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +300,7 @@ MonoBehaviour:
     hardWorking: 5
     friendly: 1
     hostile: 2
+    portrait: {fileID: 0}
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 50
@@ -486,6 +499,7 @@ MonoBehaviour:
     hardWorking: 3
     friendly: 3
     hostile: 2
+    portrait: {fileID: 0}
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 60
@@ -598,6 +612,18 @@ MonoBehaviour:
       - m_Target: {fileID: 460014543}
         m_TargetAssemblyTypeName: loadScene, Assembly-CSharp
         m_MethodName: LoadGameScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1030138544}
+        m_TargetAssemblyTypeName: ChangeReputation, Assembly-CSharp
+        m_MethodName: setRep
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -823,7 +849,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8024275f155d8458c0762976319948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  execution: {fileID: 0}
   dwellers:
   - {fileID: 1796217248}
   - {fileID: 2106607846}
@@ -832,6 +857,8 @@ MonoBehaviour:
   - {fileID: 265500844}
   - {fileID: 1892728705}
   playerDweller: {fileID: 1796217248}
+  playerVote: 
+  mostVoted: 
 --- !u!4 &669424523
 Transform:
   m_ObjectHideFlags: 0
@@ -839,6 +866,100 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669424521}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &781228628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781228630}
+  - component: {fileID: 781228629}
+  m_Layer: 0
+  m_Name: setNegativeRap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &781228629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781228628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b036560ffdb9854b9f0a89ce86ea670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 669424521}
+  target: {fileID: 1796217248}
+  change: -10
+--- !u!4 &781228630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781228628}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1030138543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1030138545}
+  - component: {fileID: 1030138544}
+  m_Layer: 0
+  m_Name: setPositiveRap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1030138544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030138543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b036560ffdb9854b9f0a89ce86ea670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 669424521}
+  target: {fileID: 1796217248}
+  change: 10
+--- !u!4 &1030138545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030138543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1020,6 +1141,7 @@ MonoBehaviour:
     hardWorking: 4
     friendly: 1
     hostile: 1
+    portrait: {fileID: 0}
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 50
@@ -1273,6 +1395,7 @@ GameObject:
   - component: {fileID: 1349887938}
   - component: {fileID: 1349887937}
   - component: {fileID: 1349887936}
+  - component: {fileID: 1349887939}
   m_Layer: 0
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1394,6 +1517,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349887934}
   m_CullTransparentMesh: 1
+--- !u!114 &1349887939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349887934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b036560ffdb9854b9f0a89ce86ea670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  target: {fileID: 0}
+  change: 0
 --- !u!1 &1767104405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1704,7 @@ MonoBehaviour:
     hardWorking: 1
     friendly: 1
     hostile: 1
+    portrait: {fileID: 0}
     relationshipEntries: []
 --- !u!4 &1796217250
 Transform:
@@ -1618,6 +1757,7 @@ MonoBehaviour:
     hardWorking: 1
     friendly: 1
     hostile: 5
+    portrait: {fileID: 0}
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 0
@@ -1680,6 +1820,7 @@ MonoBehaviour:
     hardWorking: 2
     friendly: 2
     hostile: 1
+    portrait: {fileID: 0}
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 50
@@ -1721,3 +1862,5 @@ SceneRoots:
   - {fileID: 1116849536}
   - {fileID: 265500846}
   - {fileID: 1892728707}
+  - {fileID: 1030138545}
+  - {fileID: 781228630}

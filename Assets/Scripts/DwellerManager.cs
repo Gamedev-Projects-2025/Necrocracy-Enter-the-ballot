@@ -21,7 +21,10 @@ public class DwellerManager : MonoBehaviour
     [SerializeField] public string mostVoted;
     public Dictionary<string, int> voteCounts = new Dictionary<string, int>();
 
-
+    public List<GameObject> getDwellers()
+    {
+        return dwellers;
+    }
 
     public int getVotes(string target)
     {
