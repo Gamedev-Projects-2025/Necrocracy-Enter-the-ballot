@@ -6,22 +6,43 @@ using TMPro;
 using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class DwellerManager : MonoBehaviour
 {
     public static GameObject Instance;
+
+    [SerializeField] private GameObject dialog, dialogBox;
 
     [SerializeField] private List<GameObject> dwellers; // List of all dwellers
     private List<string> dwellersNames; // List of all dwellers
     [SerializeField] private GameObject playerDweller;  // The player's dweller
 
     [SerializeField] public string playerVote;   // To store the player's vote
-    private bool hasPlayerVoted = false; // Flag to ensure the player votes first
+    private bool hasPlayerVoted = false, hasPlayerWorked = false, hasPlayerDrank = false; // Flag to ensure the player votes first
     [SerializeField] public string mostVoted;
     public Dictionary<string, int> voteCounts = new Dictionary<string, int>();
 
     private static int playersAlive = 6;
 
+    private IEnumerator DisplayDialogRoutine(string message, float duration)
+    {
+        var textComponent = dialog.GetComponent<TextMeshProUGUI>();
+
+        // Enable the dialog objects
+        dialog.SetActive(true);
+        dialogBox.SetActive(true);
+
+        // Set the text message
+        textComponent.text = message;
+
+        // Wait for the specified duration
+        yield return new WaitForSeconds(duration);
+
+        // Hide the dialog objects
+        dialog.SetActive(false);
+        dialogBox.SetActive(false);
+    }
 
     public int getPlayersAlive()
     {
@@ -58,6 +79,8 @@ public class DwellerManager : MonoBehaviour
         {
             playerVote = Instance.GetComponent<DwellerManager>().playerVote;
             mostVoted = Instance.GetComponent<DwellerManager>().mostVoted;
+            hasPlayerWorked = Instance.GetComponent<DwellerManager>().hasPlayerWorked;
+            hasPlayerDrank = Instance.GetComponent<DwellerManager>().hasPlayerDrank;
             voteCounts = new Dictionary<string, int>(Instance.GetComponent<DwellerManager>().voteCounts);
             foreach (string name in voteCounts.Keys)
             {
@@ -178,31 +201,49 @@ public class DwellerManager : MonoBehaviour
         Debug.Log(verdict);
         DwellerLogic.dwellersByName[mostVoted].GetComponent<DwellerLogic>().getDweller().isAlive = false;
         playersAlive--;
+        hasPlayerWorked = false;
+        hasPlayerDrank = false;
     }
 
     public void bar()
     {
-        foreach (GameObject dwellerObject in dwellers)
+        if (!hasPlayerDrank)
         {
-            if (dwellerObject == playerDweller || dwellerObject == null) continue;
-
-            if (dwellerObject != null)
+            foreach (GameObject dwellerObject in dwellers)
             {
-                dwellerObject.GetComponent<DwellerLogic>().drink(playerDweller);
+                if (dwellerObject == playerDweller || dwellerObject == null) continue;
+
+                if (dwellerObject != null)
+                {
+                    dwellerObject.GetComponent<DwellerLogic>().drink(playerDweller);
+                }
             }
+            hasPlayerDrank = true;
+        }
+        else
+        {
+            StartCoroutine(DisplayDialogRoutine("You have drank enoguh.", 10f));
         }
     }
 
     public void work()
     {
-        foreach (GameObject dwellerObject in dwellers)
+        if(!hasPlayerWorked)
         {
-            if (dwellerObject == playerDweller || dwellerObject == null) continue;
-
-            if (dwellerObject != null)
+            foreach (GameObject dwellerObject in dwellers)
             {
-                dwellerObject.GetComponent<DwellerLogic>().work(playerDweller);
+                if (dwellerObject == playerDweller || dwellerObject == null) continue;
+
+                if (dwellerObject != null)
+                {
+                    dwellerObject.GetComponent<DwellerLogic>().work(playerDweller);
+                }
             }
+            hasPlayerWorked = true;
+        }
+        else
+        {
+            StartCoroutine(DisplayDialogRoutine("You have worked hard enoguh.", 10f));
         }
     }
 

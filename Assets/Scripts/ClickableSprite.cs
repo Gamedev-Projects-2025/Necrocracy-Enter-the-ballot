@@ -13,6 +13,7 @@ public class ClickableSprite : MonoBehaviour
     private Color originalColor;          // To restore the original color
 
     [SerializeField] private float sizeDown = 0.9f; // Scale factor for the click effect
+    [SerializeField] private bool disableOnClick = false, isEnabled = true;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class ClickableSprite : MonoBehaviour
     private void OnMouseEnter()
     {
         // Highlight the sprite on hover
-        spriteRenderer.color = Color.green;
+        spriteRenderer.color = isEnabled? Color.green : Color.red;
     }
 
     private void OnMouseExit()
@@ -46,6 +47,14 @@ public class ClickableSprite : MonoBehaviour
         transform.localScale = originalScale;
 
         // Invoke the UnityEvent
-        onClick?.Invoke();
+        if (isEnabled)
+        {
+            onClick?.Invoke();
+        }
+
+        if (disableOnClick)
+        {
+            isEnabled = false;
+        }
     }
 }
