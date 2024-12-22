@@ -4,7 +4,6 @@ using UnityEngine;
 public class DwellerLogic : MonoBehaviour
 {
     public static readonly Dictionary<string, GameObject> dwellersByName = new Dictionary<string, GameObject>();
-
     [System.Serializable]
     public class RelationshipEntry
     {
@@ -35,6 +34,7 @@ public class DwellerLogic : MonoBehaviour
         [SerializeField]
         [Tooltip("List of relationships with other dwellers.")]
         public List<RelationshipEntry> relationshipEntries = new List<RelationshipEntry>();
+        public Dictionary<string, int> relationshipScoresByName = new Dictionary<string, int>();
 
         public void updateRelationship(GameObject target, int change)
         {
@@ -45,10 +45,37 @@ public class DwellerLogic : MonoBehaviour
             if (entry != null)
             {
                 entry.Score += change;
+                relationshipScoresByName[target.GetComponent<DwellerLogic>().getDweller().Name] += change;
             }
             else
             {
                 relationshipEntries.Add(new RelationshipEntry(target, change));
+                relationshipScoresByName.Add(target.GetComponent<DwellerLogic>().getDweller().Name, change);
+            }
+        }
+        public void setRelationship(GameObject target, int change)
+        {
+            if (target == null)
+            {
+                return;
+            }
+                
+
+            RelationshipEntry entry = relationshipEntries.Find(e => e.Target == target);
+
+            if (entry != null)
+            {
+                entry.Score = change;
+                relationshipScoresByName[target.GetComponent<DwellerLogic>().getDweller().Name] = change;
+            }
+
+        }
+
+        public void loadRelationShips()
+        {
+            foreach (RelationshipEntry dwellerEntey in relationshipEntries)
+            {
+                setRelationship(dwellerEntey.Target, relationshipScoresByName[dwellerEntey.Target.GetComponent<DwellerLogic>().getDweller().Name]);
             }
         }
 
@@ -118,6 +145,21 @@ public class DwellerLogic : MonoBehaviour
         dweller.updateRelationship(target, change);
     }
 
+    public void Start()
+    {
+        foreach (RelationshipEntry entry in dweller.relationshipEntries)
+        {
+            if (!dweller.relationshipScoresByName.ContainsKey(entry.Target.GetComponent<DwellerLogic>().getDweller().Name))
+            {
+                dweller.relationshipScoresByName.Add(entry.Target.GetComponent<DwellerLogic>().getDweller().Name, entry.Score);
+            }
+            else
+            {
+                dweller.relationshipScoresByName[entry.Target.GetComponent<DwellerLogic>().getDweller().Name] = entry.Score;
+            }
+        }
+    }
+
     private void Awake()
     {
         // Check for duplicates and handle data transfer
@@ -157,11 +199,11 @@ public class DwellerLogic : MonoBehaviour
         newInstance.dweller.portrait = dweller.portrait;
 
         // Transfer relationships
-        foreach (var entry in dweller.relationshipEntries)
+        foreach (string key in dweller.relationshipScoresByName.Keys)
         {
-            GameObject target = FindExistingInstance(entry.Target.name);
-            int score = entry.Score;
-            newInstance.dweller.updateRelationship(target, score);
+            newInstance.dweller.relationshipScoresByName[key] = dweller.relationshipScoresByName [key];
+
         }
+        newInstance.dweller.loadRelationShips();
     }
 }

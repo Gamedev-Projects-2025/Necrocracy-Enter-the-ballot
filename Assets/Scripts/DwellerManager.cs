@@ -41,7 +41,6 @@ public class DwellerManager : MonoBehaviour
         }
         else if (Instance != null && Instance != gameObject)
         {
-            Debug.Log("COPYYYYYY");
             playerVote = Instance.GetComponent<DwellerManager>().playerVote;
             mostVoted = Instance.GetComponent<DwellerManager>().mostVoted;
             voteCounts = new Dictionary<string, int>(Instance.GetComponent<DwellerManager>().voteCounts);
