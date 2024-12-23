@@ -1768,6 +1768,8 @@ MonoBehaviour:
   playerDweller: {fileID: 1019443141}
   playerVote: 
   mostVoted: 
+  playersAlive: 0
+  messageDuration: 5
 --- !u!4 &2005911207
 Transform:
   m_ObjectHideFlags: 0

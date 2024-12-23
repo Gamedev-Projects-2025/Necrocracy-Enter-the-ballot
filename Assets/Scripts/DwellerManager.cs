@@ -24,6 +24,7 @@ public class DwellerManager : MonoBehaviour
     public Dictionary<string, int> voteCounts = new Dictionary<string, int>();
 
     [SerializeField] private int playersAlive;
+    [SerializeField] private float messageDuration;
 
     private IEnumerator DisplayDialogRoutine(string message, float duration)
     {
@@ -83,6 +84,7 @@ public class DwellerManager : MonoBehaviour
             hasPlayerDrank = Instance.GetComponent<DwellerManager>().hasPlayerDrank;
             voteCounts = new Dictionary<string, int>(Instance.GetComponent<DwellerManager>().voteCounts);
             playersAlive = Instance.GetComponent<DwellerManager>().getPlayersAlive();
+            messageDuration = Instance.GetComponent<DwellerManager>().messageDuration;
             foreach (string name in voteCounts.Keys)
             {
                 Debug.Log($"{name}");
@@ -220,10 +222,12 @@ public class DwellerManager : MonoBehaviour
                 }
             }
             hasPlayerDrank = true;
+            StartCoroutine(DisplayDialogRoutine("You raised a toast to your comrades!", messageDuration));
+
         }
         else
         {
-            StartCoroutine(DisplayDialogRoutine("You have drank enoguh.", 10f));
+            StartCoroutine(DisplayDialogRoutine("You have drank enoguh. Come here after the vote.", messageDuration));
         }
     }
 
@@ -241,10 +245,11 @@ public class DwellerManager : MonoBehaviour
                 }
             }
             hasPlayerWorked = true;
+            StartCoroutine(DisplayDialogRoutine("You work hard for the glory of the union!", messageDuration));
         }
         else
         {
-            StartCoroutine(DisplayDialogRoutine("You have worked hard enoguh.", 10f));
+            StartCoroutine(DisplayDialogRoutine("You have worked hard enoguh. Come here after the vote.", messageDuration));
         }
     }
 

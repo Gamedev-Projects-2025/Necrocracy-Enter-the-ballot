@@ -542,6 +542,7 @@ MonoBehaviour:
   playerVote: 
   mostVoted: 
   playersAlive: 0
+  messageDuration: 5
 --- !u!4 &691051602
 Transform:
   m_ObjectHideFlags: 0

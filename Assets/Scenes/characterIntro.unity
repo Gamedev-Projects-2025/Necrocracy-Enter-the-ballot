@@ -782,7 +782,7 @@ MonoBehaviour:
   - name: 'Mrs. Helianthus '
     portrait: {fileID: -2353376327185201564, guid: 532d9c9b5747d26419e2e525f62ad871, type: 3}
     bio: The perfect housewife everyone wants. A lover of the fine arts and drinks.
-      She feels eliminated by her husband and seeks comfort from others.
+      She feels alienated by her husband and seeks comfort from others.
   - name: Patient 13
     portrait: {fileID: -7904695714632552384, guid: 97fc9cf0c0614df448d90c057ca5e3cd, type: 3}
     bio: We're not sure he is supposed to be here. Paranoid and irrational, he trapped
