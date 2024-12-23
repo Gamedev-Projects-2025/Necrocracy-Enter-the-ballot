@@ -849,6 +849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8024275f155d8458c0762976319948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialog: {fileID: 0}
+  dialogBox: {fileID: 0}
   dwellers:
   - {fileID: 1796217248}
   - {fileID: 2106607846}
@@ -859,6 +861,7 @@ MonoBehaviour:
   playerDweller: {fileID: 1796217248}
   playerVote: 
   mostVoted: 
+  playersAlive: 6
 --- !u!4 &669424523
 Transform:
   m_ObjectHideFlags: 0

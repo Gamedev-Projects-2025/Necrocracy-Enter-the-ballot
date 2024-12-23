@@ -470,6 +470,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8024275f155d8458c0762976319948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialog: {fileID: 0}
+  dialogBox: {fileID: 0}
   dwellers:
   - {fileID: 1173417566}
   - {fileID: 243834589}
@@ -480,6 +482,7 @@ MonoBehaviour:
   playerDweller: {fileID: 1173417566}
   playerVote: 
   mostVoted: 
+  playersAlive: 6
 --- !u!4 &78798664
 Transform:
   m_ObjectHideFlags: 0
@@ -1149,6 +1152,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   sizeDown: 0.9
+  disableOnClick: 0
+  isEnabled: 1
 --- !u!61 &356599698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2314,6 +2319,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   sizeDown: 0.9
+  disableOnClick: 0
+  isEnabled: 1
 --- !u!61 &932033274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2564,6 +2571,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   sizeDown: 0.9
+  disableOnClick: 0
+  isEnabled: 1
 --- !u!61 &968837493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4319,6 +4328,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   sizeDown: 0.9
+  disableOnClick: 0
+  isEnabled: 1
 --- !u!61 &1755013286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4690,6 +4701,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   sizeDown: 0.9
+  disableOnClick: 0
+  isEnabled: 1
 --- !u!61 &2069794270
 BoxCollider2D:
   m_ObjectHideFlags: 0

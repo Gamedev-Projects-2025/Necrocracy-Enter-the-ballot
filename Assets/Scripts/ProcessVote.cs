@@ -5,6 +5,7 @@ public class ProcessVote : MonoBehaviour
 {
     [SerializeField] private string gameover, victory, hall;
     [SerializeField] private GameObject manager;
+    [SerializeField] private int minimalDwellers;
     private DwellerManager dwellerManager;
 
     private void OnEnable()
@@ -13,7 +14,7 @@ public class ProcessVote : MonoBehaviour
 
         if (dwellerManager != null)
         {
-            if (dwellerManager.getPlayersAlive() == 2 && dwellerManager.getPlayer().GetComponent<DwellerLogic>().getDweller().isAlive)
+            if (dwellerManager.getPlayersAlive() <= 2 && dwellerManager.getPlayer().GetComponent<DwellerLogic>().getDweller().isAlive)
             {
                 resetDwellers();
                 SceneManager.LoadScene(victory);

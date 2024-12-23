@@ -23,7 +23,7 @@ public class DwellerManager : MonoBehaviour
     [SerializeField] public string mostVoted;
     public Dictionary<string, int> voteCounts = new Dictionary<string, int>();
 
-    private static int playersAlive = 6;
+    [SerializeField] private int playersAlive;
 
     private IEnumerator DisplayDialogRoutine(string message, float duration)
     {
@@ -82,6 +82,7 @@ public class DwellerManager : MonoBehaviour
             hasPlayerWorked = Instance.GetComponent<DwellerManager>().hasPlayerWorked;
             hasPlayerDrank = Instance.GetComponent<DwellerManager>().hasPlayerDrank;
             voteCounts = new Dictionary<string, int>(Instance.GetComponent<DwellerManager>().voteCounts);
+            playersAlive = Instance.GetComponent<DwellerManager>().getPlayersAlive();
             foreach (string name in voteCounts.Keys)
             {
                 Debug.Log($"{name}");

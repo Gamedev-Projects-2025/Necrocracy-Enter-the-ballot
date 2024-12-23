@@ -230,6 +230,7 @@ MonoBehaviour:
   victory: victory
   hall: mainHall
   manager: {fileID: 1771925408}
+  minimalDwellers: 2
 --- !u!1 &151807642
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,6 +2252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8024275f155d8458c0762976319948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialog: {fileID: 0}
+  dialogBox: {fileID: 0}
   dwellers:
   - {fileID: 904719103}
   - {fileID: 932078477}
@@ -2261,6 +2264,7 @@ MonoBehaviour:
   playerDweller: {fileID: 904719103}
   playerVote: 
   mostVoted: 
+  playersAlive: 6
 --- !u!4 &1771925410
 Transform:
   m_ObjectHideFlags: 0

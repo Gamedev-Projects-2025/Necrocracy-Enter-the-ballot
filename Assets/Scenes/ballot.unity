@@ -757,6 +757,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   sizeDown: 0.9
+  disableOnClick: 0
+  isEnabled: 1
 --- !u!114 &253347567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,6 +981,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   sizeDown: 0.9
+  disableOnClick: 0
+  isEnabled: 1
 --- !u!212 &361467701
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1739,6 +1743,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   sizeDown: 0.9
+  disableOnClick: 0
+  isEnabled: 1
 --- !u!212 &683305748
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2347,6 +2353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8024275f155d8458c0762976319948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialog: {fileID: 0}
+  dialogBox: {fileID: 0}
   dwellers:
   - {fileID: 1312493556}
   - {fileID: 2033716486}
@@ -2357,6 +2365,7 @@ MonoBehaviour:
   playerDweller: {fileID: 1312493556}
   playerVote: 
   mostVoted: 
+  playersAlive: 6
 --- !u!4 &894036086
 Transform:
   m_ObjectHideFlags: 0
@@ -2580,6 +2589,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   sizeDown: 0.9
+  disableOnClick: 0
+  isEnabled: 1
 --- !u!212 &1160587916
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3342,6 +3353,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   sizeDown: 0.9
+  disableOnClick: 0
+  isEnabled: 1
 --- !u!212 &1767233133
 SpriteRenderer:
   m_ObjectHideFlags: 0
