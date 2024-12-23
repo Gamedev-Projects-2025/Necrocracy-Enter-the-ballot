@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameover: gameover
-  victory: victory
+  victory: killing
   hall: mainHall
   manager: {fileID: 1771925408}
   minimalDwellers: 2

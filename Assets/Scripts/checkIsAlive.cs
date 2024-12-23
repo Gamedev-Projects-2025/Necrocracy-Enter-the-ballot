@@ -8,7 +8,7 @@ public class checkIsAlive : MonoBehaviour
     {
         if (dweller != null && !dweller.getDweller().isAlive)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

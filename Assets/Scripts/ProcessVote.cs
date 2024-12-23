@@ -16,12 +16,10 @@ public class ProcessVote : MonoBehaviour
         {
             if (dwellerManager.getPlayersAlive() <= 2 && dwellerManager.getPlayer().GetComponent<DwellerLogic>().getDweller().isAlive)
             {
-                resetDwellers();
                 SceneManager.LoadScene(victory);
             }
             else if (!dwellerManager.getPlayer().GetComponent<DwellerLogic>().getDweller().isAlive)
             {
-                resetDwellers();
                 SceneManager.LoadScene(gameover);
             }
             else
@@ -29,13 +27,5 @@ public class ProcessVote : MonoBehaviour
                 SceneManager.LoadScene(hall);
             }
         }
-    }
-    private void resetDwellers()
-    {
-        foreach (GameObject dweller in dwellerManager.getDwellers())
-        { 
-            Destroy(dweller);
-        }
-        Destroy(manager);
     }
 }
