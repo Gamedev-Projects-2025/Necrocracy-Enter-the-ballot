@@ -4,11 +4,16 @@ public class checkIsAlive : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private DwellerLogic dweller;
+    [SerializeField] private bool destroyOnDeath = true;
+    [SerializeField] private bool destroyOnAlive = false;
     void Start()
     {
-        if (dweller != null && !dweller.getDweller().isAlive)
+        if (dweller != null)
         {
-            gameObject.SetActive(false);
+            if ((!dweller.getDweller().isAlive && destroyOnDeath) || (dweller.getDweller().isAlive && destroyOnAlive))
+            {
+                Destroy(gameObject);
+            }   
         }
     }
 

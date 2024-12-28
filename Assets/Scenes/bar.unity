@@ -1577,6 +1577,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1976822361}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &1722779256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,8 +1770,8 @@ MonoBehaviour:
   playerDweller: {fileID: 1019443141}
   playerVote: 
   mostVoted: 
-  playersAlive: 0
-  messageDuration: 5
+  playersAlive: 6
+  messageDuration: 10
 --- !u!4 &2005911207
 Transform:
   m_ObjectHideFlags: 0
