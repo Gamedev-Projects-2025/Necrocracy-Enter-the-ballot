@@ -22,6 +22,9 @@ In order to ensure the colony’s survival, citizens are required to hold a mont
 
 [Itch](https://necrocracy.itch.io/necrocracy-enter-the-ballot)
 
+![Untitled Diagram drawio](https://github.com/user-attachments/assets/5038a68e-a56f-412b-8d69-e83820bf753b)
 ![vote](https://github.com/user-attachments/assets/8a491e2f-a35a-44d5-887d-50a59091e901)
 ![vault](https://github.com/user-attachments/assets/7cf529f4-fc91-4650-a01b-bbb158bd9b32)
 ![013 - Vault](https://github.com/user-attachments/assets/16199b94-3fbe-4390-b212-48e203174fc9)
+
+
