@@ -242,6 +242,9 @@ MonoBehaviour:
       Score: 0
     - Target: {fileID: 1396153122}
       Score: 0
+    dialogTree:
+      Nodes: []
+    currentDialogNodeID: 0
 --- !u!4 &209556646
 Transform:
   m_ObjectHideFlags: 0
@@ -895,6 +898,9 @@ MonoBehaviour:
       Score: 60
     - Target: {fileID: 209556644}
       Score: 10
+    dialogTree:
+      Nodes: []
+    currentDialogNodeID: 0
 --- !u!4 &562191209
 Transform:
   m_ObjectHideFlags: 0
@@ -1476,6 +1482,24 @@ MonoBehaviour:
       Score: 80
     - Target: {fileID: 209556644}
       Score: 10
+    dialogTree:
+      Nodes:
+      - ID: 0
+        Text: Yes or no?
+        Choices:
+        - Text: YES
+          NextNodeID: 1
+          Actions: []
+        - Text: No
+          NextNodeID: 2
+          Actions: []
+      - ID: 2
+        Text: SAD
+        Choices: []
+      - ID: 1
+        Text: happy
+        Choices: []
+    currentDialogNodeID: 0
 --- !u!4 &1396153124
 Transform:
   m_ObjectHideFlags: 0
@@ -1539,6 +1563,9 @@ MonoBehaviour:
       Score: 100
     - Target: {fileID: 209556644}
       Score: 50
+    dialogTree:
+      Nodes: []
+    currentDialogNodeID: 0
 --- !u!4 &1457150280
 Transform:
   m_ObjectHideFlags: 0
@@ -1728,6 +1755,9 @@ MonoBehaviour:
     hostile: 1
     portrait: {fileID: 0}
     relationshipEntries: []
+    dialogTree:
+      Nodes: []
+    currentDialogNodeID: 0
 --- !u!4 &1669131620
 Transform:
   m_ObjectHideFlags: 0
@@ -2076,6 +2106,9 @@ MonoBehaviour:
       Score: 80
     - Target: {fileID: 209556644}
       Score: 10
+    dialogTree:
+      Nodes: []
+    currentDialogNodeID: 0
 --- !u!4 &2096708948
 Transform:
   m_ObjectHideFlags: 0

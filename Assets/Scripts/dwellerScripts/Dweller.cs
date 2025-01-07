@@ -12,11 +12,19 @@ public class Dweller
     public int friendly = 1; // 1 = unfriendly, 5 = very friendly
     public int hostile = 1; // 1 = not hostile, 5 = very hostile
     public Sprite portrait;
+
     [Header("Relationships")]
     [SerializeField]
     [Tooltip("List of relationships with other dwellers.")]
     public List<RelationshipEntry> relationshipEntries = new List<RelationshipEntry>();
     public Dictionary<string, int> relationshipScoresByName = new Dictionary<string, int>();
+
+    [Header("Dialog System")]
+    [SerializeField]
+    [Tooltip("Dialog tree for the dweller.")]
+    public DialogTree dialogTree;
+
+    public int currentDialogNodeID = 0; // Tracks the current position in the dialog tree
 
     public void updateRelationship(GameObject target, int change)
     {
@@ -35,13 +43,10 @@ public class Dweller
             relationshipScoresByName.Add(target.GetComponent<DwellerLogic>().getDweller().Name, change);
         }
     }
+
     public void setRelationship(GameObject target, int change)
     {
-        if (target == null)
-        {
-            return;
-        }
-
+        if (target == null) return;
 
         RelationshipEntry entry = relationshipEntries.Find(e => e.Target == target);
 
@@ -50,14 +55,13 @@ public class Dweller
             entry.Score = change;
             relationshipScoresByName[target.GetComponent<DwellerLogic>().getDweller().Name] = change;
         }
-
     }
 
     public void loadRelationShips()
     {
-        foreach (RelationshipEntry dwellerEntey in relationshipEntries)
+        foreach (RelationshipEntry dwellerEntry in relationshipEntries)
         {
-            setRelationship(dwellerEntey.Target, relationshipScoresByName[dwellerEntey.Target.GetComponent<DwellerLogic>().getDweller().Name]);
+            setRelationship(dwellerEntry.Target, relationshipScoresByName[dwellerEntry.Target.GetComponent<DwellerLogic>().getDweller().Name]);
         }
     }
 
@@ -88,5 +92,23 @@ public class Dweller
         }
 
         return worstDweller;
+    }
+
+    // Dialog-related methods
+    public DialogNode GetCurrentDialogNode()
+    {
+        return dialogTree != null ? dialogTree.GetNode(currentDialogNodeID) : null;
+    }
+
+    public void AdvanceDialog(int choiceIndex)
+    {
+        if (dialogTree == null) return;
+
+        DialogNode currentNode = dialogTree.GetNode(currentDialogNodeID);
+        if (currentNode != null && choiceIndex >= 0 && choiceIndex < currentNode.Choices.Count)
+        {
+            currentDialogNodeID = currentNode.Choices[choiceIndex].NextNodeID;
+            currentNode.Choices[choiceIndex].PerformActions();
+        }
     }
 }
