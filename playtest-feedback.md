@@ -19,7 +19,7 @@
 1. I played through the game thrice and won twice.
 2. I worked and drank on every day.
 3. Yes, but I also designed the game so I already knew everything.
-4. Nope.
+4. Well, when a dialog shows up, you can't click on the back button until it is finished, and for me it was a little annoying. 
 5. Yes, but I am the developer
 
 ## Playtest 1: Anonymous Discord Friend
