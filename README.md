@@ -15,13 +15,19 @@ In order to ensure the colony’s survival, citizens are required to hold a mont
 3) Can you easily understand the objective and mechanics of the game from the intro and profiles?
 4) Have you ran into any bugs?
 5) Is the game too easy to beat?
-   
+
 [formal-elements](https://github.com/Gamedev-Projects-2025/Necrocracy/blob/main/formal-elements.md)
 
 [dramatic-elements](https://github.com/Gamedev-Projects-2025/Necrocracy/blob/main/dramatic-elements.md)
 
+[dynamic](https://github.com/Gamedev-Projects-2025/Necrocracy-Enter-the-ballot/blob/main/dynamic.md)
+
 [Itch](https://necrocracy.itch.io/necrocracy-enter-the-ballot)
+
+![Untitled Diagram(1) drawio](https://github.com/user-attachments/assets/7f44f92e-6f9f-4ffa-a2ae-be0ca83bb63e)
 
 ![vote](https://github.com/user-attachments/assets/8a491e2f-a35a-44d5-887d-50a59091e901)
 ![vault](https://github.com/user-attachments/assets/7cf529f4-fc91-4650-a01b-bbb158bd9b32)
 ![013 - Vault](https://github.com/user-attachments/assets/16199b94-3fbe-4390-b212-48e203174fc9)
+
+
