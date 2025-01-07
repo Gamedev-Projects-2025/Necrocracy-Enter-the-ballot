@@ -483,6 +483,7 @@ MonoBehaviour:
   playerVote: 
   mostVoted: 
   playersAlive: 6
+  messageDuration: 0
 --- !u!4 &78798664
 Transform:
   m_ObjectHideFlags: 0
@@ -621,7 +622,6 @@ MonoBehaviour:
     hardWorking: 1
     friendly: 1
     hostile: 5
-    portrait: {fileID: 0}
     relationshipEntries:
     - Target: {fileID: 1173417566}
       Score: 0
@@ -771,7 +771,6 @@ MonoBehaviour:
     hardWorking: 2
     friendly: 2
     hostile: 1
-    portrait: {fileID: 0}
     relationshipEntries:
     - Target: {fileID: 1173417566}
       Score: 50
@@ -834,7 +833,6 @@ MonoBehaviour:
     hardWorking: 4
     friendly: 1
     hostile: 1
-    portrait: {fileID: 0}
     relationshipEntries:
     - Target: {fileID: 1173417566}
       Score: 50
@@ -3052,7 +3050,6 @@ MonoBehaviour:
     hardWorking: 1
     friendly: 1
     hostile: 1
-    portrait: {fileID: 0}
     relationshipEntries: []
 --- !u!4 &1173417568
 Transform:
@@ -3505,7 +3502,6 @@ MonoBehaviour:
     hardWorking: 3
     friendly: 3
     hostile: 2
-    portrait: {fileID: 0}
     relationshipEntries:
     - Target: {fileID: 1173417566}
       Score: 60
@@ -3568,7 +3564,6 @@ MonoBehaviour:
     hardWorking: 5
     friendly: 1
     hostile: 2
-    portrait: {fileID: 0}
     relationshipEntries:
     - Target: {fileID: 1173417566}
       Score: 50

@@ -11,7 +11,7 @@ public class Dweller
     public int hardWorking = 1; // 1 = lazy, 5 = very hard-working
     public int friendly = 1; // 1 = unfriendly, 5 = very friendly
     public int hostile = 1; // 1 = not hostile, 5 = very hostile
-
+    public Sprite portrait;
     [Header("Relationships")]
     [SerializeField]
     [Tooltip("List of relationships with other dwellers.")]

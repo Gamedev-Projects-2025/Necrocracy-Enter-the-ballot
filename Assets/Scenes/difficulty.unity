@@ -300,7 +300,7 @@ MonoBehaviour:
     hardWorking: 5
     friendly: 1
     hostile: 2
-    portrait: {fileID: 0}
+    portrait: {fileID: -7231304139433089348, guid: 552e26caa98ce58438d3fad656d86251, type: 3}
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 50
@@ -499,7 +499,7 @@ MonoBehaviour:
     hardWorking: 3
     friendly: 3
     hostile: 2
-    portrait: {fileID: 0}
+    portrait: {fileID: -2353376327185201564, guid: 532d9c9b5747d26419e2e525f62ad871, type: 3}
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 60
@@ -1145,7 +1145,7 @@ MonoBehaviour:
     hardWorking: 4
     friendly: 1
     hostile: 1
-    portrait: {fileID: 0}
+    portrait: {fileID: -2709793324926187703, guid: 1baf03fa2a549f64684c2b90d9210ab1, type: 3}
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 50
@@ -1761,7 +1761,7 @@ MonoBehaviour:
     hardWorking: 1
     friendly: 1
     hostile: 5
-    portrait: {fileID: 0}
+    portrait: {fileID: -7904695714632552384, guid: 97fc9cf0c0614df448d90c057ca5e3cd, type: 3}
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 0
@@ -1824,7 +1824,7 @@ MonoBehaviour:
     hardWorking: 2
     friendly: 2
     hostile: 1
-    portrait: {fileID: 0}
+    portrait: {fileID: -2399441134800039056, guid: 5c1f3bbc1d89e174696a20ab4f2fdc19, type: 3}
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 50

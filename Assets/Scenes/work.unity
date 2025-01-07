@@ -648,6 +648,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640857672}
   m_CullTransparentMesh: 1
+--- !u!1 &651718050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651718052}
+  - component: {fileID: 651718051}
+  m_Layer: 0
+  m_Name: startDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &651718051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651718050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614193525de7db748983d6f737a5ace4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogScene: dialog
+--- !u!4 &651718052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651718050}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6585592, y: -0.53248143, z: 0.04386631}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &703926883
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +796,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1648244372}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!114 &703926887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,7 +812,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 651718051}
+        m_TargetAssemblyTypeName: BeginDialog, Assembly-CSharp
+        m_MethodName: loadDialog
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1648244372}
+          m_ObjectArgumentAssemblyTypeName: DwellerLogic, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   sizeDown: 0.9
   disableOnClick: 0
   isEnabled: 1
@@ -2129,7 +2188,7 @@ MonoBehaviour:
     hardWorking: 4
     friendly: 1
     hostile: 1
-    portrait: {fileID: 0}
+    portrait: {fileID: -2709793324926187703, guid: 1baf03fa2a549f64684c2b90d9210ab1, type: 3}
     relationshipEntries:
     - Target: {fileID: 1936222111}
       Score: 50
@@ -2303,3 +2362,4 @@ SceneRoots:
   - {fileID: 1099177264}
   - {fileID: 1037406803}
   - {fileID: 1195450173}
+  - {fileID: 651718052}

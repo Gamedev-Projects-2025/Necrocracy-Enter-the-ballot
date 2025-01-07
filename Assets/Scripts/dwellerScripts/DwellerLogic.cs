@@ -40,7 +40,6 @@ public class DwellerLogic : MonoBehaviour
         };
         dweller.updateRelationship(target, change);
     }
-
     public void Start()
     {
         foreach (RelationshipEntry entry in dweller.relationshipEntries)
@@ -92,6 +91,7 @@ public class DwellerLogic : MonoBehaviour
         newInstance.dweller.hardWorking = dweller.hardWorking;
         newInstance.dweller.friendly = dweller.friendly;
         newInstance.dweller.hostile = dweller.hostile;
+        newInstance.dweller.portrait = dweller.portrait;
 
         // Transfer relationships
         foreach (string key in dweller.relationshipScoresByName.Keys)
