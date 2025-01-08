@@ -231,6 +231,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 5
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1669131618}
       Score: 0
@@ -244,7 +245,6 @@ MonoBehaviour:
       Score: 0
     dialogTree:
       Nodes: []
-    currentDialogNodeID: 0
 --- !u!4 &209556646
 Transform:
   m_ObjectHideFlags: 0
@@ -887,6 +887,7 @@ MonoBehaviour:
     friendly: 2
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1669131618}
       Score: 50
@@ -900,7 +901,6 @@ MonoBehaviour:
       Score: 10
     dialogTree:
       Nodes: []
-    currentDialogNodeID: 0
 --- !u!4 &562191209
 Transform:
   m_ObjectHideFlags: 0
@@ -1471,6 +1471,7 @@ MonoBehaviour:
     friendly: 3
     hostile: 2
     portrait: {fileID: -2353376327185201564, guid: 532d9c9b5747d26419e2e525f62ad871, type: 3}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1669131618}
       Score: 60
@@ -1489,17 +1490,20 @@ MonoBehaviour:
         Choices:
         - Text: YES
           NextNodeID: 1
-          Actions: []
+          Actions:
+          - dwellerName: player
+            change: 10000000
         - Text: No
           NextNodeID: 2
-          Actions: []
+          Actions:
+          - dwellerName: player
+            change: -100
       - ID: 2
         Text: SAD
         Choices: []
       - ID: 1
         Text: happy
         Choices: []
-    currentDialogNodeID: 0
 --- !u!4 &1396153124
 Transform:
   m_ObjectHideFlags: 0
@@ -1552,6 +1556,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1669131618}
       Score: 50
@@ -1565,7 +1570,6 @@ MonoBehaviour:
       Score: 50
     dialogTree:
       Nodes: []
-    currentDialogNodeID: 0
 --- !u!4 &1457150280
 Transform:
   m_ObjectHideFlags: 0
@@ -1754,10 +1758,10 @@ MonoBehaviour:
     friendly: 1
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries: []
     dialogTree:
       Nodes: []
-    currentDialogNodeID: 0
 --- !u!4 &1669131620
 Transform:
   m_ObjectHideFlags: 0
@@ -2095,6 +2099,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 2
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1669131618}
       Score: 50
@@ -2108,7 +2113,6 @@ MonoBehaviour:
       Score: 10
     dialogTree:
       Nodes: []
-    currentDialogNodeID: 0
 --- !u!4 &2096708948
 Transform:
   m_ObjectHideFlags: 0

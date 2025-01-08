@@ -9,6 +9,7 @@ public class dialogManager : MonoBehaviour
     [SerializeField] private GameObject returnObject;
     [SerializeField] private TextMeshProUGUI dialogTextBox;
     [SerializeField] private VerticalLayoutGroup choicesContainer;
+    [SerializeField] public DwellerManager dwellerManager;
 
     public void Start()
     {
@@ -90,6 +91,7 @@ public class dialogManager : MonoBehaviour
         if (currentNode == null) return;
 
         DialogChoice selectedChoice = currentNode.Choices[choiceIndex];
+        selectedChoice.PerformActions();
         dweller.getDweller().currentDialogNodeID = selectedChoice.NextNodeID;
 
         DialogNode nextNode = dweller.getDweller().dialogTree.GetNode(selectedChoice.NextNodeID);

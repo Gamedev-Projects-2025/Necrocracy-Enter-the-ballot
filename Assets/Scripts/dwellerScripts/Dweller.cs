@@ -12,6 +12,8 @@ public class Dweller
     public int friendly = 1; // 1 = unfriendly, 5 = very friendly
     public int hostile = 1; // 1 = not hostile, 5 = very hostile
     public Sprite portrait;
+    public int currentDialogNodeID = 0; // Tracks the current position in the dialog tree
+
 
     [Header("Relationships")]
     [SerializeField]
@@ -24,7 +26,6 @@ public class Dweller
     [Tooltip("Dialog tree for the dweller.")]
     public DialogTree dialogTree;
 
-    public int currentDialogNodeID = 0; // Tracks the current position in the dialog tree
 
     public void updateRelationship(GameObject target, int change)
     {
@@ -40,7 +41,11 @@ public class Dweller
         else
         {
             relationshipEntries.Add(new RelationshipEntry(target, change));
-            relationshipScoresByName.Add(target.GetComponent<DwellerLogic>().getDweller().Name, change);
+            if (!relationshipScoresByName.ContainsKey(target.GetComponent<DwellerLogic>().getDweller().Name))
+            {
+                relationshipScoresByName.Add(target.GetComponent<DwellerLogic>().getDweller().Name, change);
+
+            }
         }
     }
 
@@ -105,10 +110,12 @@ public class Dweller
         if (dialogTree == null) return;
 
         DialogNode currentNode = dialogTree.GetNode(currentDialogNodeID);
+
         if (currentNode != null && choiceIndex >= 0 && choiceIndex < currentNode.Choices.Count)
         {
             currentDialogNodeID = currentNode.Choices[choiceIndex].NextNodeID;
             currentNode.Choices[choiceIndex].PerformActions();
+            Debug.Log("Action taken");
         }
     }
 }

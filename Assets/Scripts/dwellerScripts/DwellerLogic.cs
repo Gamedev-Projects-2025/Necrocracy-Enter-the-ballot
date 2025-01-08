@@ -95,6 +95,7 @@ public class DwellerLogic : MonoBehaviour
         newInstance.dweller.currentDialogNodeID = dweller.currentDialogNodeID;
         newInstance.dweller.dialogTree = dweller.dialogTree;
 
+
         // Transfer relationships
         foreach (string key in dweller.relationshipScoresByName.Keys)
         {

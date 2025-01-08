@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 195281670}
   - component: {fileID: 195281672}
   m_Layer: 0
-  m_Name: portrait
+  m_Name: dialogManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,6 +267,7 @@ MonoBehaviour:
   returnObject: {fileID: 137362692}
   dialogTextBox: {fileID: 2098762666}
   choicesContainer: {fileID: 874887763}
+  dwellerManager: {fileID: 0}
 --- !u!1 &374205092
 GameObject:
   m_ObjectHideFlags: 0
