@@ -301,6 +301,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 2
     portrait: {fileID: -7231304139433089348, guid: 552e26caa98ce58438d3fad656d86251, type: 3}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 50
@@ -312,6 +313,53 @@ MonoBehaviour:
       Score: 80
     - Target: {fileID: 1892728705}
       Score: 10
+    dialogTree:
+      Nodes:
+      - ID: 0
+        Text: Comrade!
+        Choices:
+        - Text: What's up?
+          NextNodeID: 1
+          Actions: []
+        - Text: Can I get your opinion on someone?
+          NextNodeID: 2
+          Actions: []
+        - Text: What do you like t do in your free time?
+          NextNodeID: 3
+          Actions: []
+      - ID: 1
+        Text: All is well! All is according to plan! Glory to the union!
+        Choices: []
+      - ID: 2
+        Text: Comrade!
+        Choices:
+        - Text: Altmann
+          NextNodeID: 4
+          Actions: []
+        - Text: Mr. Helianthus
+          NextNodeID: 5
+          Actions: []
+        - Text: Mrs. Helianthus
+          NextNodeID: 6
+          Actions: []
+        - Text: Patient 13
+          NextNodeID: 7
+          Actions: []
+      - ID: 3
+        Text: Working! Can't waste time on drinking!
+        Choices: []
+      - ID: 3
+        Text: Working! Can't waste time on drinking!
+        Choices: []
+      - ID: 5
+        Text: A great man of the union! Not as great as me.
+        Choices: []
+      - ID: 3
+        Text: Working! Can't waste time on drinking!
+        Choices: []
+      - ID: 7
+        Text: I don't think he should be here.
+        Choices: []
 --- !u!4 &147440331
 Transform:
   m_ObjectHideFlags: 0
@@ -500,6 +548,7 @@ MonoBehaviour:
     friendly: 3
     hostile: 2
     portrait: {fileID: -2353376327185201564, guid: 532d9c9b5747d26419e2e525f62ad871, type: 3}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 60
@@ -511,6 +560,54 @@ MonoBehaviour:
       Score: 80
     - Target: {fileID: 1892728705}
       Score: 10
+    dialogTree:
+      Nodes:
+      - ID: 0
+        Text: Hey there, sugar!
+        Choices:
+        - Text: What's up?
+          NextNodeID: 1
+          Actions: []
+        - Text: Can I get your opinion on someone?
+          NextNodeID: 2
+          Actions: []
+        - Text: What do you like to do in your free time?
+          NextNodeID: 3
+          Actions: []
+      - ID: 1
+        Text: All is well! But I wish my husby was around more often...
+        Choices: []
+      - ID: 2
+        Text: On whom?
+        Choices:
+        - Text: Mr. Helianthus
+          NextNodeID: 4
+          Actions: []
+        - Text: Neumann
+          NextNodeID: 5
+          Actions: []
+        - Text: Altmann
+          NextNodeID: 6
+          Actions: []
+        - Text: Patient 13
+          NextNodeID: 7
+          Actions: []
+      - ID: 3
+        Text: A glass of wine always hits the spot!
+        Choices: []
+      - ID: 4
+        Text: I like him, don't get me wrong, but I wish he spent more time with
+          me!
+        Choices: []
+      - ID: 5
+        Text: I like him. He visits me sometimes...
+        Choices: []
+      - ID: 6
+        Text: Poor old man. He'll get what he deserves.
+        Choices: []
+      - ID: 7
+        Text: I wish he wasn't here! He is so creppy!
+        Choices: []
 --- !u!4 &265500846
 Transform:
   m_ObjectHideFlags: 0
@@ -1146,6 +1243,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 1
     portrait: {fileID: -2709793324926187703, guid: 1baf03fa2a549f64684c2b90d9210ab1, type: 3}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 50
@@ -1157,6 +1255,24 @@ MonoBehaviour:
       Score: 100
     - Target: {fileID: 1892728705}
       Score: 50
+    dialogTree:
+      Nodes:
+      - ID: 0
+        Text: Too busy! Can't talk! I must work!
+        Choices:
+        - Text: Just give me a minute!
+          NextNodeID: 1
+          Actions:
+          - dwellerName: player
+            change: -10
+      - ID: 1
+        Text: DON'T DISTURB ME!
+        Choices:
+        - Text: Just give me a minute!
+          NextNodeID: 1
+          Actions:
+          - dwellerName: player
+            change: -10
 --- !u!4 &1116849536
 Transform:
   m_ObjectHideFlags: 0
@@ -1709,7 +1825,10 @@ MonoBehaviour:
     friendly: 1
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries: []
+    dialogTree:
+      Nodes: []
 --- !u!4 &1796217250
 Transform:
   m_ObjectHideFlags: 0
@@ -1762,6 +1881,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 5
     portrait: {fileID: -7904695714632552384, guid: 97fc9cf0c0614df448d90c057ca5e3cd, type: 3}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 0
@@ -1773,6 +1893,23 @@ MonoBehaviour:
       Score: 0
     - Target: {fileID: 265500844}
       Score: 0
+    dialogTree:
+      Nodes:
+      - ID: 0
+        Text: VOTE FOR ME FOR PRESIDENT! YES!
+        Choices:
+        - Text: You could use a drink or two.
+          NextNodeID: 1
+          Actions: []
+        - Text: You could use a day at the production room
+          NextNodeID: 2
+          Actions: []
+      - ID: 1
+        Text: EVIL WATER!
+        Choices: []
+      - ID: 2
+        Text: EVIL MACHINE!
+        Choices: []
 --- !u!4 &1892728707
 Transform:
   m_ObjectHideFlags: 0
@@ -1825,6 +1962,7 @@ MonoBehaviour:
     friendly: 2
     hostile: 1
     portrait: {fileID: -2399441134800039056, guid: 5c1f3bbc1d89e174696a20ab4f2fdc19, type: 3}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1796217248}
       Score: 50
@@ -1836,6 +1974,83 @@ MonoBehaviour:
       Score: 60
     - Target: {fileID: 1892728705}
       Score: 10
+    dialogTree:
+      Nodes:
+      - ID: 0
+        Text: Oh, it's only you...
+        Choices:
+        - Text: What's up?
+          NextNodeID: 1
+          Actions:
+          - dwellerName: player
+            change: -5
+        - Text: Can I get your opinion on someone?
+          NextNodeID: 2
+          Actions: []
+        - Text: What do you like to do in your free time?
+          NextNodeID: 3
+          Actions: []
+      - ID: 1
+        Text: Terrible. Now scram!
+        Choices:
+        - Text: What's up?
+          NextNodeID: 1
+          Actions: []
+        - Text: What do you like to do in your free time?
+          NextNodeID: 3
+          Actions: []
+        - Text: What do you like to do in your free time?
+          NextNodeID: 3
+          Actions: []
+      - ID: 2
+        Text: On whom?
+        Choices:
+        - Text: Neumann
+          NextNodeID: 6
+          Actions:
+          - dwellerName: young
+            change: -20
+        - Text: Mr. Helianthus
+          NextNodeID: 7
+          Actions: []
+        - Text: Mrs. Helianthus
+          NextNodeID: 8
+          Actions: []
+        - Text: Patient 13
+          NextNodeID: 9
+          Actions: []
+      - ID: 3
+        Text: Drinking my problems away. I can't stand being sober or working for
+          even a second!
+        Choices:
+        - Text: Let me buy you a drink!
+          NextNodeID: 4
+          Actions:
+          - dwellerName: player
+            change: 10
+        - Text: I am sorry for you.
+          NextNodeID: 5
+          Actions:
+          - dwellerName: player
+            change: -20
+      - ID: 4
+        Text: Maybe you're alright. Thanks.
+        Choices: []
+      - ID: 5
+        Text: I don't need your pitty! SCRAM!
+        Choices: []
+      - ID: 6
+        Text: Just thinking about that boot licker makes my blood boil!
+        Choices: []
+      - ID: 7
+        Text: I don't care for him.
+        Choices: []
+      - ID: 8
+        Text: I think she has something agaisnt me.
+        Choices: []
+      - ID: 9
+        Text: ' I fear no man, but that thing-- it scares me.'
+        Choices: []
 --- !u!4 &2106607848
 Transform:
   m_ObjectHideFlags: 0

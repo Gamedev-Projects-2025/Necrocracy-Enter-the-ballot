@@ -65,7 +65,7 @@ public class dialogManager : MonoBehaviour
 
             // RectTransform for the button
             RectTransform buttonRectTransform = choiceButton.GetComponent<RectTransform>();
-            buttonRectTransform.sizeDelta = new Vector2(200, 100); // Set size to 10x10
+            buttonRectTransform.sizeDelta = new Vector2(1000, 80); 
             buttonRectTransform.localScale = Vector3.one; // Ensure the scale is 1
             buttonRectTransform.anchorMin = new Vector2(0.5f, 0.5f); // Center the button
             buttonRectTransform.anchorMax = new Vector2(0.5f, 0.5f); // Center the button
