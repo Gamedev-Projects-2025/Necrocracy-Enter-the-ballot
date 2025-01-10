@@ -13,6 +13,7 @@ public class dialogManager : MonoBehaviour
 
     public void Start()
     {
+        dweller.getDweller().currentDialogNodeID = 0;
         // Set the portrait of the dweller
         gameObject.GetComponent<SpriteRenderer>().sprite = dweller.getDweller().portrait;
 

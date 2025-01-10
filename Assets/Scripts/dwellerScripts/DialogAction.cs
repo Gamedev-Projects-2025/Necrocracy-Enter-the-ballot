@@ -7,12 +7,16 @@ public class DialogAction{
 
     public string dwellerName;
     public int change = 0;
+    public bool hasHappened = false;
 
     public void PerformAction()
     {
-        dialogManager.dweller.getDweller().updateRelationship(DwellerLogic.dwellersByName[dwellerName], change);
+        if (!hasHappened)
+        {
+            dialogManager.dweller.getDweller().updateRelationship(DwellerLogic.dwellersByName[dwellerName], change);
 
-        Debug.Log(dialogManager.dweller.getDweller().getRelationship(DwellerLogic.dwellersByName[dwellerName]));
-        
+            Debug.Log(dialogManager.dweller.getDweller().getRelationship(DwellerLogic.dwellersByName[dwellerName]));
+            hasHappened = true;
+        }
     }
 }
