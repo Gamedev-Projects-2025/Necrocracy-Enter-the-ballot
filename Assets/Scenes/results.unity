@@ -156,6 +156,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 2
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 904719103}
       Score: 50
@@ -167,6 +168,8 @@ MonoBehaviour:
       Score: 80
     - Target: {fileID: 830901260}
       Score: 10
+    dialogTree:
+      Nodes: []
 --- !u!4 &52594231
 Transform:
   m_ObjectHideFlags: 0
@@ -239,7 +242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <
+  m_text: < Backwards
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -424,7 +427,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <<
+  m_text: << Fast backwards
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1518,6 +1521,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 904719103}
       Score: 50
@@ -1529,6 +1533,8 @@ MonoBehaviour:
       Score: 100
     - Target: {fileID: 830901260}
       Score: 50
+    dialogTree:
+      Nodes: []
 --- !u!4 &577291179
 Transform:
   m_ObjectHideFlags: 0
@@ -1739,7 +1745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2264,6 +2270,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 5
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 904719103}
       Score: 0
@@ -2275,6 +2282,8 @@ MonoBehaviour:
       Score: 0
     - Target: {fileID: 1922837553}
       Score: 0
+    dialogTree:
+      Nodes: []
 --- !u!4 &830901262
 Transform:
   m_ObjectHideFlags: 0
@@ -2533,7 +2542,10 @@ MonoBehaviour:
     friendly: 1
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries: []
+    dialogTree:
+      Nodes: []
 --- !u!4 &904719105
 Transform:
   m_ObjectHideFlags: 0
@@ -2586,6 +2598,7 @@ MonoBehaviour:
     friendly: 2
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 904719103}
       Score: 50
@@ -2597,6 +2610,8 @@ MonoBehaviour:
       Score: 60
     - Target: {fileID: 830901260}
       Score: 10
+    dialogTree:
+      Nodes: []
 --- !u!4 &932078479
 Transform:
   m_ObjectHideFlags: 0
@@ -2669,7 +2684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '||'
+  m_text: '|PAUSE|'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2805,7 +2820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '>'
+  m_text: Resume >
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3825,7 +3840,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695137720}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f178a5b9bc91feb47a7c8775d7dc45f6, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 1e6105d80cbd7d94c933bccc7d86eaa8, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -3835,7 +3850,7 @@ VideoPlayer:
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
   m_AspectRatio: 2
-  m_DataSource: 1
+  m_DataSource: 0
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
@@ -4769,6 +4784,7 @@ MonoBehaviour:
     friendly: 3
     hostile: 2
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 904719103}
       Score: 60
@@ -4780,6 +4796,8 @@ MonoBehaviour:
       Score: 80
     - Target: {fileID: 830901260}
       Score: 10
+    dialogTree:
+      Nodes: []
 --- !u!4 &1922837555
 Transform:
   m_ObjectHideFlags: 0
@@ -4852,7 +4870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '>>'
+  m_text: Fast forward >>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

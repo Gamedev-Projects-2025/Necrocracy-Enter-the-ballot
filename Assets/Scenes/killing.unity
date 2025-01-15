@@ -220,6 +220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1505217896}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &245115723
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +368,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1350973035}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &428023631
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +471,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1477748280}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &584725764
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +574,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1350973035}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &586912642
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +677,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1798839795}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &659023871
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +872,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1505217896}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &926746088
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,7 +911,10 @@ MonoBehaviour:
     friendly: 1
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries: []
+    dialogTree:
+      Nodes: []
 --- !u!4 &926746090
 Transform:
   m_ObjectHideFlags: 0
@@ -1016,6 +1031,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1885175661}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &1350973034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1070,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 926746088}
       Score: 50
@@ -1064,6 +1082,8 @@ MonoBehaviour:
       Score: 100
     - Target: {fileID: 1477748279}
       Score: 50
+    dialogTree:
+      Nodes: []
 --- !u!4 &1350973036
 Transform:
   m_ObjectHideFlags: 0
@@ -1116,6 +1136,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 5
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 926746088}
       Score: 0
@@ -1127,6 +1148,8 @@ MonoBehaviour:
       Score: 0
     - Target: {fileID: 1505217895}
       Score: 0
+    dialogTree:
+      Nodes: []
 --- !u!4 &1477748281
 Transform:
   m_ObjectHideFlags: 0
@@ -1243,6 +1266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1798839795}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &1503404688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,6 +1369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1477748280}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &1505217895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,6 +1408,7 @@ MonoBehaviour:
     friendly: 3
     hostile: 2
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 926746088}
       Score: 60
@@ -1392,6 +1420,8 @@ MonoBehaviour:
       Score: 80
     - Target: {fileID: 1477748279}
       Score: 10
+    dialogTree:
+      Nodes: []
 --- !u!4 &1505217897
 Transform:
   m_ObjectHideFlags: 0
@@ -1419,6 +1449,7 @@ GameObject:
   - component: {fileID: 1794176221}
   - component: {fileID: 1794176220}
   - component: {fileID: 1794176223}
+  - component: {fileID: 1794176224}
   m_Layer: 0
   m_Name: gun_0
   m_TagString: Untagged
@@ -1608,6 +1639,103 @@ PolygonCollider2D:
       - {x: 0.895, y: -1.2149999}
       - {x: 0.98499995, y: -0.995}
   m_UseDelaunayMesh: 0
+--- !u!82 &1794176224
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794176219}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 96535d67c924bcd4e9555958e5d65ac8, type: 3}
+  m_Resource: {fileID: 8300000, guid: 96535d67c924bcd4e9555958e5d65ac8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: -1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1798839794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,6 +1773,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 2
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 926746088}
       Score: 50
@@ -1656,6 +1785,8 @@ MonoBehaviour:
       Score: 80
     - Target: {fileID: 1477748279}
       Score: 10
+    dialogTree:
+      Nodes: []
 --- !u!4 &1798839796
 Transform:
   m_ObjectHideFlags: 0
@@ -1708,6 +1839,7 @@ MonoBehaviour:
     friendly: 2
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 926746088}
       Score: 50
@@ -1719,6 +1851,8 @@ MonoBehaviour:
       Score: 60
     - Target: {fileID: 1477748279}
       Score: 10
+    dialogTree:
+      Nodes: []
 --- !u!4 &1885175662
 Transform:
   m_ObjectHideFlags: 0
@@ -1835,6 +1969,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller: {fileID: 1885175661}
+  destroyOnDeath: 1
+  destroyOnAlive: 0
 --- !u!1 &2080007018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,6 +2013,7 @@ MonoBehaviour:
   playerVote: 
   mostVoted: 
   playersAlive: 6
+  messageDuration: 0
 --- !u!4 &2080007020
 Transform:
   m_ObjectHideFlags: 0

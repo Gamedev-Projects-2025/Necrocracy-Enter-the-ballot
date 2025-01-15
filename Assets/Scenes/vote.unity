@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: BACK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -396,6 +396,7 @@ MonoBehaviour:
     friendly: 3
     hostile: 2
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1417564947}
       Score: 60
@@ -407,6 +408,8 @@ MonoBehaviour:
       Score: 80
     - Target: {fileID: 517721225}
       Score: 10
+    dialogTree:
+      Nodes: []
 --- !u!4 &242778865
 Transform:
   m_ObjectHideFlags: 0
@@ -538,6 +541,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 2
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1417564947}
       Score: 50
@@ -549,6 +553,8 @@ MonoBehaviour:
       Score: 80
     - Target: {fileID: 517721225}
       Score: 10
+    dialogTree:
+      Nodes: []
 --- !u!4 &302159493
 Transform:
   m_ObjectHideFlags: 0
@@ -659,6 +665,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 5
     portrait: {fileID: -7904695714632552384, guid: 97fc9cf0c0614df448d90c057ca5e3cd, type: 3}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1417564947}
       Score: 0
@@ -670,6 +677,8 @@ MonoBehaviour:
       Score: 0
     - Target: {fileID: 242778863}
       Score: 0
+    dialogTree:
+      Nodes: []
 --- !u!4 &517721227
 Transform:
   m_ObjectHideFlags: 0
@@ -860,6 +869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785575203}
   - component: {fileID: 785575202}
+  - component: {fileID: 785575204}
   m_Layer: 0
   m_Name: execute_0
   m_TagString: Untagged
@@ -937,6 +947,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &785575204
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785575201}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1d434646a812282458953df527e33407, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1d434646a812282458953df527e33407, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1002621744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,6 +1389,7 @@ MonoBehaviour:
     friendly: 1
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1417564947}
       Score: 50
@@ -1293,6 +1401,8 @@ MonoBehaviour:
       Score: 100
     - Target: {fileID: 517721225}
       Score: 50
+    dialogTree:
+      Nodes: []
 --- !u!4 &1389257033
 Transform:
   m_ObjectHideFlags: 0
@@ -1345,7 +1455,10 @@ MonoBehaviour:
     friendly: 1
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries: []
+    dialogTree:
+      Nodes: []
 --- !u!4 &1417564949
 Transform:
   m_ObjectHideFlags: 0
@@ -1398,6 +1511,7 @@ MonoBehaviour:
     friendly: 2
     hostile: 1
     portrait: {fileID: 0}
+    currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1417564947}
       Score: 50
@@ -1409,6 +1523,8 @@ MonoBehaviour:
       Score: 60
     - Target: {fileID: 517721225}
       Score: 10
+    dialogTree:
+      Nodes: []
 --- !u!4 &1633786214
 Transform:
   m_ObjectHideFlags: 0

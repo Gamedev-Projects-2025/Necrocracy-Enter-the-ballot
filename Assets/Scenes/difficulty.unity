@@ -321,44 +321,76 @@ MonoBehaviour:
         - Text: What's up?
           NextNodeID: 1
           Actions: []
+          isEnabled: 1
         - Text: Can I get your opinion on someone?
           NextNodeID: 2
           Actions: []
-        - Text: What do you like t do in your free time?
+          isEnabled: 1
+        - Text: What do you like to do in your free time?
           NextNodeID: 3
           Actions: []
+          isEnabled: 1
       - ID: 1
         Text: All is well! All is according to plan! Glory to the union!
         Choices: []
       - ID: 2
-        Text: Comrade!
+        Text: About whom?
         Choices:
         - Text: Altmann
           NextNodeID: 4
           Actions: []
+          isEnabled: 1
         - Text: Mr. Helianthus
           NextNodeID: 5
           Actions: []
+          isEnabled: 1
         - Text: Mrs. Helianthus
           NextNodeID: 6
-          Actions: []
+          Actions:
+          - dwellerName: husband
+            optionalOriginDweller: 
+            change: 0
+            hasHappened: 0
+            useOriginDweller: 0
+            enableNewDialog: 1
+            nodeIndex: 0
+            choiceIndex: 1
+          isEnabled: 1
         - Text: Patient 13
           NextNodeID: 7
           Actions: []
+          isEnabled: 1
       - ID: 3
         Text: Working! Can't waste time on drinking!
         Choices: []
-      - ID: 3
-        Text: Working! Can't waste time on drinking!
-        Choices: []
+      - ID: 4
+        Text: Truly a great man! Greater than me! Shame he wastes his time at the
+          bar.
+        Choices:
+        - Text: Did you know he hates you?
+          NextNodeID: 8
+          Actions:
+          - dwellerName: old
+            optionalOriginDweller: 
+            change: -60
+            hasHappened: 0
+            useOriginDweller: 1
+            enableNewDialog: 0
+            nodeIndex: 0
+            choiceIndex: 0
+          isEnabled: 0
       - ID: 5
         Text: A great man of the union! Not as great as me.
         Choices: []
-      - ID: 3
-        Text: Working! Can't waste time on drinking!
+      - ID: 6
+        Text: She is a fine woman. Let's keep it at at that.
         Choices: []
       - ID: 7
         Text: I don't think he should be here.
+        Choices: []
+      - ID: 8
+        Text: The alcohol must have eroded his higher cognitive skills. I cannot
+          allow such a disgrace to the union to live.
         Choices: []
 --- !u!4 &147440331
 Transform:
@@ -568,12 +600,15 @@ MonoBehaviour:
         - Text: What's up?
           NextNodeID: 1
           Actions: []
+          isEnabled: 1
         - Text: Can I get your opinion on someone?
           NextNodeID: 2
           Actions: []
+          isEnabled: 1
         - Text: What do you like to do in your free time?
           NextNodeID: 3
           Actions: []
+          isEnabled: 1
       - ID: 1
         Text: All is well! But I wish my husby was around more often...
         Choices: []
@@ -583,15 +618,19 @@ MonoBehaviour:
         - Text: Mr. Helianthus
           NextNodeID: 4
           Actions: []
+          isEnabled: 1
         - Text: Neumann
           NextNodeID: 5
           Actions: []
+          isEnabled: 1
         - Text: Altmann
           NextNodeID: 6
           Actions: []
+          isEnabled: 1
         - Text: Patient 13
           NextNodeID: 7
           Actions: []
+          isEnabled: 1
       - ID: 3
         Text: A glass of wine always hits the spot!
         Choices: []
@@ -1264,15 +1303,33 @@ MonoBehaviour:
           NextNodeID: 1
           Actions:
           - dwellerName: player
+            optionalOriginDweller: 
             change: -10
+            hasHappened: 0
+            useOriginDweller: 1
+            enableNewDialog: 0
+            nodeIndex: 0
+            choiceIndex: 0
+          isEnabled: 1
+        - Text: You might want to keep tabs on Neumann.
+          NextNodeID: 2
+          Actions:
+          - dwellerName: young
+            optionalOriginDweller: 
+            change: -20
+            hasHappened: 0
+            useOriginDweller: 1
+            enableNewDialog: 0
+            nodeIndex: 0
+            choiceIndex: 0
+          isEnabled: 0
       - ID: 1
         Text: DON'T DISTURB ME!
-        Choices:
-        - Text: Just give me a minute!
-          NextNodeID: 1
-          Actions:
-          - dwellerName: player
-            change: -10
+        Choices: []
+      - ID: 2
+        Text: I think I just might. He always comes to work early to finsih his shift
+          before me!
+        Choices: []
 --- !u!4 &1116849536
 Transform:
   m_ObjectHideFlags: 0
@@ -1901,9 +1958,11 @@ MonoBehaviour:
         - Text: You could use a drink or two.
           NextNodeID: 1
           Actions: []
+          isEnabled: 1
         - Text: You could use a day at the production room
           NextNodeID: 2
           Actions: []
+          isEnabled: 1
       - ID: 1
         Text: EVIL WATER!
         Choices: []
@@ -1981,27 +2040,31 @@ MonoBehaviour:
         Choices:
         - Text: What's up?
           NextNodeID: 1
-          Actions:
-          - dwellerName: player
-            change: -5
+          Actions: []
+          isEnabled: 1
         - Text: Can I get your opinion on someone?
           NextNodeID: 2
           Actions: []
+          isEnabled: 1
         - Text: What do you like to do in your free time?
           NextNodeID: 3
           Actions: []
+          isEnabled: 1
       - ID: 1
         Text: Terrible. Now scram!
         Choices:
         - Text: What's up?
           NextNodeID: 1
           Actions: []
+          isEnabled: 1
         - Text: What do you like to do in your free time?
           NextNodeID: 3
           Actions: []
+          isEnabled: 1
         - Text: What do you like to do in your free time?
           NextNodeID: 3
           Actions: []
+          isEnabled: 1
       - ID: 2
         Text: On whom?
         Choices:
@@ -2009,16 +2072,26 @@ MonoBehaviour:
           NextNodeID: 6
           Actions:
           - dwellerName: young
+            optionalOriginDweller: 
             change: -20
+            hasHappened: 0
+            useOriginDweller: 1
+            enableNewDialog: 1
+            nodeIndex: 4
+            choiceIndex: 0
+          isEnabled: 1
         - Text: Mr. Helianthus
           NextNodeID: 7
           Actions: []
+          isEnabled: 1
         - Text: Mrs. Helianthus
           NextNodeID: 8
           Actions: []
+          isEnabled: 1
         - Text: Patient 13
           NextNodeID: 9
           Actions: []
+          isEnabled: 1
       - ID: 3
         Text: Drinking my problems away. I can't stand being sober or working for
           even a second!
@@ -2027,12 +2100,26 @@ MonoBehaviour:
           NextNodeID: 4
           Actions:
           - dwellerName: player
+            optionalOriginDweller: 
             change: 10
+            hasHappened: 0
+            useOriginDweller: 1
+            enableNewDialog: 0
+            nodeIndex: 0
+            choiceIndex: 0
+          isEnabled: 1
         - Text: I am sorry for you.
           NextNodeID: 5
           Actions:
           - dwellerName: player
+            optionalOriginDweller: 
             change: -20
+            hasHappened: 0
+            useOriginDweller: 1
+            enableNewDialog: 0
+            nodeIndex: 0
+            choiceIndex: 0
+          isEnabled: 1
       - ID: 4
         Text: Maybe you're alright. Thanks.
         Choices: []
