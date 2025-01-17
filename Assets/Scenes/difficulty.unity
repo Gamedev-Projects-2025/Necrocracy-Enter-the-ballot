@@ -299,20 +299,20 @@ MonoBehaviour:
     alcoholTolerance: 1
     hardWorking: 5
     friendly: 1
-    hostile: 2
+    hostile: 1
     portrait: {fileID: -7231304139433089348, guid: 552e26caa98ce58438d3fad656d86251, type: 3}
     currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1796217248}
-      Score: 50
+      Score: 40
     - Target: {fileID: 2106607846}
       Score: 100
     - Target: {fileID: 1116849534}
-      Score: 40
+      Score: 50
     - Target: {fileID: 265500844}
       Score: 80
     - Target: {fileID: 1892728705}
-      Score: 10
+      Score: -2000
     dialogTree:
       Nodes:
       - ID: 0
@@ -372,7 +372,7 @@ MonoBehaviour:
           Actions:
           - dwellerName: old
             optionalOriginDweller: 
-            change: -60
+            change: -1000
             hasHappened: 0
             useOriginDweller: 1
             enableNewDialog: 0
@@ -383,14 +383,31 @@ MonoBehaviour:
         Text: A great man of the union! Not as great as me.
         Choices: []
       - ID: 6
-        Text: She is a fine woman. Let's keep it at at that.
-        Choices: []
+        Text: 'She is a fine woman. Let''s keep it at at that. [New dialog unlocked
+          with another dweller]'
+        Choices:
+        - Text: You know. She says her man doesn't pay any attention to her. Don't
+            you think she'll be better off without him in the picutre?
+          NextNodeID: 9
+          Actions:
+          - dwellerName: husband
+            optionalOriginDweller: 
+            change: -1000
+            hasHappened: 0
+            useOriginDweller: 1
+            enableNewDialog: 0
+            nodeIndex: 0
+            choiceIndex: 0
+          isEnabled: 0
       - ID: 7
         Text: I don't think he should be here.
         Choices: []
       - ID: 8
-        Text: The alcohol must have eroded his higher cognitive skills. I cannot
-          allow such a disgrace to the union to live.
+        Text: 'The alcohol must have eroded his higher cognitive skills. I cannot
+          allow such a disgrace to the union to live. [Relationship changed]'
+        Choices: []
+      - ID: 9
+        Text: 'I think I just might vote for him. [Relationship changed]'
         Choices: []
 --- !u!4 &147440331
 Transform:
@@ -577,21 +594,21 @@ MonoBehaviour:
     isAlive: 1
     alcoholTolerance: 4
     hardWorking: 3
-    friendly: 3
-    hostile: 2
+    friendly: 1
+    hostile: 1
     portrait: {fileID: -2353376327185201564, guid: 532d9c9b5747d26419e2e525f62ad871, type: 3}
     currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1796217248}
-      Score: 60
+      Score: 40
     - Target: {fileID: 2106607846}
-      Score: 20
+      Score: 30
     - Target: {fileID: 147440329}
       Score: 80
     - Target: {fileID: 1116849534}
       Score: 80
     - Target: {fileID: 1892728705}
-      Score: 10
+      Score: -2000
     dialogTree:
       Nodes:
       - ID: 0
@@ -617,15 +634,39 @@ MonoBehaviour:
         Choices:
         - Text: Mr. Helianthus
           NextNodeID: 4
-          Actions: []
+          Actions:
+          - dwellerName: young
+            optionalOriginDweller: 
+            change: 0
+            hasHappened: 0
+            useOriginDweller: 0
+            enableNewDialog: 1
+            nodeIndex: 6
+            choiceIndex: 0
           isEnabled: 1
         - Text: Neumann
           NextNodeID: 5
-          Actions: []
+          Actions:
+          - dwellerName: husband
+            optionalOriginDweller: 
+            change: 0
+            hasHappened: 0
+            useOriginDweller: 0
+            enableNewDialog: 1
+            nodeIndex: 0
+            choiceIndex: 1
           isEnabled: 1
         - Text: Altmann
           NextNodeID: 6
-          Actions: []
+          Actions:
+          - dwellerName: old
+            optionalOriginDweller: 
+            change: 0
+            hasHappened: 0
+            useOriginDweller: 0
+            enableNewDialog: 1
+            nodeIndex: 8
+            choiceIndex: 0
           isEnabled: 1
         - Text: Patient 13
           NextNodeID: 7
@@ -635,14 +676,16 @@ MonoBehaviour:
         Text: A glass of wine always hits the spot!
         Choices: []
       - ID: 4
-        Text: I like him, don't get me wrong, but I wish he spent more time with
-          me!
+        Text: 'I like him, don''t get me wrong, but I wish he spent more time with
+          me! [New dialog unlocked with another dweller]'
         Choices: []
       - ID: 5
-        Text: I like him. He visits me sometimes...
+        Text: 'I like him. He visits me sometimes... [New dialog unlocked with another
+          dweller]'
         Choices: []
       - ID: 6
-        Text: Poor old man. He'll get what he deserves.
+        Text: 'Poor old man. He''ll get what he deserves. [New dialog unlocked with
+          another dweller]'
         Choices: []
       - ID: 7
         Text: I wish he wasn't here! He is so creppy!
@@ -1277,7 +1320,7 @@ MonoBehaviour:
   dweller:
     Name: husband
     isAlive: 1
-    alcoholTolerance: 3
+    alcoholTolerance: 2
     hardWorking: 4
     friendly: 1
     hostile: 1
@@ -1285,15 +1328,15 @@ MonoBehaviour:
     currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1796217248}
-      Score: 50
+      Score: 40
     - Target: {fileID: 2106607846}
-      Score: 50
+      Score: 60
     - Target: {fileID: 147440329}
       Score: 50
     - Target: {fileID: 265500844}
       Score: 100
     - Target: {fileID: 1892728705}
-      Score: 50
+      Score: -2000
     dialogTree:
       Nodes:
       - ID: 0
@@ -1316,7 +1359,7 @@ MonoBehaviour:
           Actions:
           - dwellerName: young
             optionalOriginDweller: 
-            change: -20
+            change: -1000
             hasHappened: 0
             useOriginDweller: 1
             enableNewDialog: 0
@@ -1324,11 +1367,11 @@ MonoBehaviour:
             choiceIndex: 0
           isEnabled: 0
       - ID: 1
-        Text: DON'T DISTURB ME!
+        Text: 'DON''T DISTURB ME! [Relationship changed]'
         Choices: []
       - ID: 2
-        Text: I think I just might. He always comes to work early to finsih his shift
-          before me!
+        Text: 'I think I just might. He always comes to work early to finsih his
+          shift before me! [Relationship changed]'
         Choices: []
 --- !u!4 &1116849536
 Transform:
@@ -1949,7 +1992,7 @@ MonoBehaviour:
     - Target: {fileID: 1116849534}
       Score: 0
     - Target: {fileID: 265500844}
-      Score: 0
+      Score: -100
     dialogTree:
       Nodes:
       - ID: 0
@@ -2017,22 +2060,22 @@ MonoBehaviour:
     Name: old
     isAlive: 1
     alcoholTolerance: 5
-    hardWorking: 2
-    friendly: 2
+    hardWorking: 1
+    friendly: 1
     hostile: 1
     portrait: {fileID: -2399441134800039056, guid: 5c1f3bbc1d89e174696a20ab4f2fdc19, type: 3}
     currentDialogNodeID: 0
     relationshipEntries:
     - Target: {fileID: 1796217248}
-      Score: 50
-    - Target: {fileID: 147440329}
       Score: 40
+    - Target: {fileID: 147440329}
+      Score: 30
     - Target: {fileID: 1116849534}
       Score: 60
     - Target: {fileID: 265500844}
-      Score: 60
+      Score: 50
     - Target: {fileID: 1892728705}
-      Score: 10
+      Score: -2000
     dialogTree:
       Nodes:
       - ID: 0
@@ -2052,19 +2095,7 @@ MonoBehaviour:
           isEnabled: 1
       - ID: 1
         Text: Terrible. Now scram!
-        Choices:
-        - Text: What's up?
-          NextNodeID: 1
-          Actions: []
-          isEnabled: 1
-        - Text: What do you like to do in your free time?
-          NextNodeID: 3
-          Actions: []
-          isEnabled: 1
-        - Text: What do you like to do in your free time?
-          NextNodeID: 3
-          Actions: []
-          isEnabled: 1
+        Choices: []
       - ID: 2
         Text: On whom?
         Choices:
@@ -2121,22 +2152,38 @@ MonoBehaviour:
             choiceIndex: 0
           isEnabled: 1
       - ID: 4
-        Text: Maybe you're alright. Thanks.
+        Text: 'Maybe you''re alright. Thanks. [Relationship changed]'
         Choices: []
       - ID: 5
-        Text: I don't need your pitty! SCRAM!
+        Text: 'I don''t need your pitty! SCRAM! [Relationship changed]'
         Choices: []
       - ID: 6
-        Text: Just thinking about that boot licker makes my blood boil!
+        Text: 'Just thinking about that boot licker makes my blood boil! [Relationship
+          changed] [New dialog unlocked with another dweller]'
         Choices: []
       - ID: 7
         Text: I don't care for him.
         Choices: []
       - ID: 8
-        Text: I think she has something agaisnt me.
-        Choices: []
+        Text: I think she has something agaisnt me, but I am not sure.
+        Choices:
+        - Text: She does hold a grudge against you.
+          NextNodeID: 10
+          Actions:
+          - dwellerName: wife
+            optionalOriginDweller: 
+            change: -20
+            hasHappened: 0
+            useOriginDweller: 1
+            enableNewDialog: 0
+            nodeIndex: 0
+            choiceIndex: 0
+          isEnabled: 0
       - ID: 9
         Text: ' I fear no man, but that thing-- it scares me.'
+        Choices: []
+      - ID: 10
+        Text: 'Well I''ll be damned. [Relationship changed]'
         Choices: []
 --- !u!4 &2106607848
 Transform:

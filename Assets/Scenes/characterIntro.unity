@@ -1647,7 +1647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba6028004651cb4694e155a23e18993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: difficulty
+  sceneName: InfoManual
 --- !u!4 &1672653775
 Transform:
   m_ObjectHideFlags: 0

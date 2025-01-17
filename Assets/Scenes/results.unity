@@ -3806,6 +3806,7 @@ GameObject:
   - component: {fileID: 1695137724}
   - component: {fileID: 1695137723}
   - component: {fileID: 1695137722}
+  - component: {fileID: 1695137725}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -3904,6 +3905,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695137720}
   m_CullTransparentMesh: 1
+--- !u!114 &1695137725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695137720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a58282183c4ec754480e509d68dae7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 1695137722}
+  videoFileName: static loop.mp4
 --- !u!1 &1709746807
 GameObject:
   m_ObjectHideFlags: 0
