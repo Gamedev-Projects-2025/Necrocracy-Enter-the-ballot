@@ -954,7 +954,7 @@ MonoBehaviour:
         m_MethodName: SetPlayerVote
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1919354020}
+          m_ObjectArgument: {fileID: 111861993}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1819,7 +1819,7 @@ MonoBehaviour:
         m_MethodName: SetPlayerVote
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1919354020}
+          m_ObjectArgument: {fileID: 588977542}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2804,7 +2804,7 @@ MonoBehaviour:
         m_MethodName: SetPlayerVote
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1919354020}
+          m_ObjectArgument: {fileID: 1720010498}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3576,7 +3576,7 @@ MonoBehaviour:
         m_MethodName: SetPlayerVote
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1919354020}
+          m_ObjectArgument: {fileID: 2033716486}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
