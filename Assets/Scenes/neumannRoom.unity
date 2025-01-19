@@ -1266,6 +1266,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1004315606
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1767881115079948861, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_Name
+      value: volumeMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833635802932035871, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833635802932035871, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833635802932035871, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833635802932035871, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833635802932035871, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833635802932035871, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833635802932035871, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833635802932035871, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833635802932035871, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833635802932035871, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 292e92323eeac9b4f9d4cedab475876f, type: 3}
 --- !u!1 &1016796930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,9 +1794,14 @@ MonoBehaviour:
             change: -1000
             hasHappened: 0
             useOriginDweller: 0
+            enableNewDialog: 0
+            nodeIndex: 0
+            choiceIndex: 0
+          isEnabled: 1
         - Text: No
           NextNodeID: 2
           Actions: []
+          isEnabled: 1
       - ID: 1
         Text: You expose their affair to Mr. Helianthus, ruining their reputation.
         Choices: []
@@ -2562,3 +2624,4 @@ SceneRoots:
   - {fileID: 1122523519}
   - {fileID: 1241474001}
   - {fileID: 1652290769}
+  - {fileID: 1004315606}
