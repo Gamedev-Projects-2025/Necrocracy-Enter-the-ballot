@@ -5,23 +5,10 @@ public class SpawnAndDestroyPrefab : MonoBehaviour
     public GameObject prefabToSpawn; // Assign the prefab in the Inspector
     private GameObject spawnedPrefab; // Reference to the currently spawned prefab
 
-    public void TogglePrefab()
+    public void OnNoteButtonPressed()
     {
-        if (spawnedPrefab == null)
-        {
-            // Spawn the prefab if it doesn't exist
-            SpawnPrefab();
-        }
-        else
-        {
-            // Destroy the prefab if it exists
-            DestroyPrefab();
-        }
-    }
-
-    private void SpawnPrefab()
-    {
-        if (prefabToSpawn != null)
+        // Spawn the prefab when the button is pressed
+        if (spawnedPrefab == null && prefabToSpawn != null)
         {
             // Instantiate the prefab
             spawnedPrefab = Instantiate(prefabToSpawn);
@@ -30,19 +17,16 @@ public class SpawnAndDestroyPrefab : MonoBehaviour
             spawnedPrefab.transform.SetParent(Camera.main.transform);
 
             // Set position to the middle of the screen (camera's position)
-            spawnedPrefab.transform.localPosition = new Vector3 (0, 0, -1);
+            spawnedPrefab.transform.localPosition = new Vector3(0, 0, 1);
+
             // Optionally reset rotation and scale
             spawnedPrefab.transform.localRotation = Quaternion.identity;
-            spawnedPrefab.transform.localScale = Vector3.one;
-        }
-        else
-        {
-            Debug.LogError("Prefab is not assigned!");
         }
     }
 
-    private void DestroyPrefab()
+    public void OnNoteButtonReleased()
     {
+        // Destroy the prefab when the button is released
         if (spawnedPrefab != null)
         {
             Destroy(spawnedPrefab);

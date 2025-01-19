@@ -9,6 +9,7 @@ public class loadScene : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneName))
         {
+            // Load the new scene
             SceneManager.LoadScene(sceneName);
         }
     }
