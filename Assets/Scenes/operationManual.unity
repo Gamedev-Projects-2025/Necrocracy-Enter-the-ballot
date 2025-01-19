@@ -766,6 +766,14 @@ MonoBehaviour:
     portrait: {fileID: -3011681440091969271, guid: 18b2b6183523a5f4a8f4718495361b2b, type: 3}
     bio: 'TO DO: Talk to my comrades, work a shift in the production room, have a
       drink at the bar, explore the bunker, VOTE! VOTE! VOTE! '
+  - name: THE GOAL OF THE GAME
+    portrait: {fileID: -1500434286138515679, guid: e6058a95535d27b4bb5f4011ce48a6a3, type: 3}
+    bio: 'Your objective is simple: do not get voted out. Every round, you and your
+      comrades hold a vote to decide who is going to be successful. When someone
+      gets voted out, they die. Your comrades vote based on their relationship with
+      others. The worse the relationship with someone, the more likely they are to
+      vote for that someone. You may change your reputation by drinking, working,
+      or talking with your comrades.'
   - name: Interacting with objects
     portrait: {fileID: 6230788792946851344, guid: 0942df64a5571714381a516c5f416965, type: 3}
     bio: Interactable objects will glow bright green when you hover your mouse over
