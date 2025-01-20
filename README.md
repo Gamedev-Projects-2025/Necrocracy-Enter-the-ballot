@@ -2,6 +2,9 @@
 
 **Death is on the ballot! Vote to kill!**
 
+[Itch.io](https://necrocracy.itch.io/necrocracy-enter-the-ballot)
+
+
 ---
 
 ## Game Overview
@@ -21,8 +24,6 @@ In order to ensure the colony’s survival, citizens are required to hold a mont
 [dramatic-elements](https://github.com/Gamedev-Projects-2025/Necrocracy/blob/main/dramatic-elements.md)
 
 [dynamic](https://github.com/Gamedev-Projects-2025/Necrocracy-Enter-the-ballot/blob/main/dynamic.md)
-
-[Itch](https://necrocracy.itch.io/necrocracy-enter-the-ballot)
 
 ![Untitled Diagram(1) drawio](https://github.com/user-attachments/assets/7f44f92e-6f9f-4ffa-a2ae-be0ca83bb63e)
 
