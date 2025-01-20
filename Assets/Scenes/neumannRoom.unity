@@ -1791,7 +1791,7 @@ MonoBehaviour:
           Actions:
           - dwellerName: wife
             optionalOriginDweller: husband
-            change: -1000
+            change: -2000
             hasHappened: 0
             useOriginDweller: 0
             enableNewDialog: 0
@@ -1803,7 +1803,8 @@ MonoBehaviour:
           Actions: []
           isEnabled: 1
       - ID: 1
-        Text: You expose their affair to Mr. Helianthus, ruining their reputation.
+        Text: 'You expose their affair to Mr. Helianthus, ruining their reputation.
+          [Relationship changed]'
         Choices: []
       - ID: 2
         Text: Some things are better left forgotten... For now.

@@ -4,6 +4,7 @@ public class ResetDwellers : MonoBehaviour
 {
     [SerializeField] private GameObject manager;
     private DwellerManager dwellerManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,15 +14,23 @@ public class ResetDwellers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void resetDwellers()
     {
-        foreach (GameObject dweller in dwellerManager.getDwellers())
+        // Destroy all objects with DwellerLogic component
+        DwellerLogic[] dwellersLogic = Object.FindObjectsByType<DwellerLogic>(FindObjectsSortMode.None);
+        foreach (DwellerLogic dweller in dwellersLogic)
         {
-            Destroy(dweller);
+            Destroy(dweller.gameObject);
         }
-        Destroy(manager);
+
+        // Destroy all objects with DwellerManager component (including the manager)
+        DwellerManager[] managers = Object.FindObjectsByType<DwellerManager>(FindObjectsSortMode.None);
+        foreach (DwellerManager dwManager in managers)
+        {
+            Destroy(dwManager.gameObject);
+        }
     }
 }
