@@ -1056,7 +1056,7 @@ Transform:
   m_GameObject: {fileID: 697845301}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1.7032373, y: 0.8800266, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1511,7 +1511,7 @@ Transform:
   m_GameObject: {fileID: 1305061572}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.040877488, w: 0.99916416}
-  m_LocalPosition: {x: -5.73, y: 1.53, z: 0}
+  m_LocalPosition: {x: -5.73, y: 1.53, z: 1}
   m_LocalScale: {x: 0.61691135, y: 0.61691135, z: 0.61691135}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2322,7 +2322,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 976532423}
+      - m_Target: {fileID: 976532424}
         m_TargetAssemblyTypeName: BeginDialog, Assembly-CSharp
         m_MethodName: loadDialog
         m_Mode: 2
