@@ -28,6 +28,15 @@ public class dialogManager : MonoBehaviour
         }
     }
 
+    public void resetDialog()
+    {
+        dweller.getDweller().currentDialogNodeID = 0;
+        DialogNode currentNode = dweller.getDweller().dialogTree.GetNode(dweller.getDweller().currentDialogNodeID);
+        if (currentNode != null)
+        {
+            SetDialog(currentNode);
+        }
+    }
     private void SetDialog(DialogNode node)
     {
         // Set the dialog text
