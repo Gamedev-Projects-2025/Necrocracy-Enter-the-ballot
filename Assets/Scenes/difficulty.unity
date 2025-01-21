@@ -673,7 +673,9 @@ MonoBehaviour:
           Actions: []
           isEnabled: 1
       - ID: 3
-        Text: A glass of wine always hits the spot!
+        Text: A glass of wine always hits the spot! I don't care for working at the
+          production room. My husband is a complete opposite. All he does is work
+          at that darn production room and he dislikes drinking.
         Choices: []
       - ID: 4
         Text: 'I like him, don''t get me wrong, but I wish he spent more time with

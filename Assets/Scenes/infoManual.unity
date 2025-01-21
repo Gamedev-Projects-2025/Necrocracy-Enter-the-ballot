@@ -765,11 +765,11 @@ MonoBehaviour:
   - name: The goal of the game
     portrait: {fileID: -1500434286138515679, guid: e6058a95535d27b4bb5f4011ce48a6a3, type: 3}
     bio: 'Your objective is simple: do not get voted out. Every round, you and your
-      comrades hold a vote to decide who is going to be successful. When someone
+      comrades hold a vote to decide who is going to be sacrificed. When someone
       gets voted out, they die. Your comrades vote based on their relationship with
       others. The worse the relationship with someone, the more likely they are to
       vote for that someone. You may change your reputation by drinking, working,
-      or talking with your comrades.'
+      or talking with your comrades. FLIP TO THE NEXT PAGE.'
   - name: Interacting with objects
     portrait: {fileID: 6230788792946851344, guid: 0942df64a5571714381a516c5f416965, type: 3}
     bio: Interactable objects will glow bright green when you hover your mouse over
@@ -811,6 +811,13 @@ MonoBehaviour:
       Each of your comrades has different opinions about work, and thus working a
       shift them will change their opinion of you either negatively or positively.
       A good comrade only works in good company.
+  - name: Acessing the info manual
+    portrait: {fileID: 2535999174365705316, guid: e342b0b2b1d8d1844834ce67bb0d8889, type: 3}
+    bio: Click on the note icon to acess this manual again during the gam
+  - name: Acessing the files of your comrades
+    portrait: {fileID: -8684288615668073726, guid: c86d6044c0ff27d4ea181bf1294fcb5e, type: 3}
+    bio: Click on the file icon to acess files of your comrades again during the
+      game
   characterImage: {fileID: 1393995788}
   nameText: {fileID: 1806946300}
   bioText: {fileID: 179895376}
