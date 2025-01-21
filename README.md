@@ -2,7 +2,7 @@
 
 **Death is on the ballot! Vote to kill!**
 
-[Itch.io](https://necrocracy.itch.io/necrocracy-enter-the-ballot)
+[Play The Game On itch.io!](https://necrocracy.itch.io/necrocracy-enter-the-ballot)
 
 
 ---
