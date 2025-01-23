@@ -33,8 +33,13 @@ In order to ensure the colony’s survival, citizens are required to hold a mont
 
 ## Credits:
 Thank you chatGPT for making coding this game bearable!
+
 Thank you FreeSound for all the sfx in the game!
+
 Thank you [twentyfour](https://www.flaticon.com/authors/twentyfour) for the icons for the volume menu!
+
 Thank you [remove.bg](https://www.remove.bg/) for removing all the backgrounds from our images!
+
 Thank you google images for helping me find all the assets I need!
+
 Thank God!
