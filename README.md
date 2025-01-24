@@ -4,7 +4,7 @@
 
 [Play The Game On itch.io!](https://necrocracy.itch.io/necrocracy-enter-the-ballot)
 
-[Watch The Game Trailer On Youtube!](https://youtu.be/0DNfT_C36d4)
+[Watch The Game Trailer On Youtube!](https://youtu.be/M29isnwFN84)
 
 
 ---
