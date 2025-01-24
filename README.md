@@ -3,6 +3,7 @@
 **Death is on the ballot! Vote to kill!**
 
 [Play The Game On itch.io!](https://necrocracy.itch.io/necrocracy-enter-the-ballot)
+[Watch The Game Trailer On Youtube!](https://youtu.be/0DNfT_C36d4)
 
 
 ---
@@ -41,5 +42,7 @@ Thank you [twentyfour](https://www.flaticon.com/authors/twentyfour) for the icon
 Thank you [remove.bg](https://www.remove.bg/) for removing all the backgrounds from our images!
 
 Thank you google images for helping me find all the assets I need!
+
+Thank you Inshot for helping us editing the trailer!
 
 Thank God!
