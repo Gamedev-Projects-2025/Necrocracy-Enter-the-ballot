@@ -1752,7 +1752,7 @@ GameObject:
   - component: {fileID: 1241474001}
   - component: {fileID: 1241474000}
   m_Layer: 0
-  m_Name: letterAction
+  m_Name: letterActionB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1771,7 +1771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dweller:
-    Name: 
+    Name: B
     isAlive: 1
     alcoholTolerance: 1
     hardWorking: 1

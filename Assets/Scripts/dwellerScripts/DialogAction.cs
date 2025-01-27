@@ -23,7 +23,7 @@ public class DialogAction{
             }
             else
             {
-                DwellerLogic.dwellersByName[optionalOriginDweller].gameObject.GetComponent<DwellerLogic>().getDweller().updateRelationship(DwellerLogic.dwellersByName[dwellerName], change); ;
+                DwellerLogic.dwellersByName[optionalOriginDweller].gameObject.GetComponent<DwellerLogic>().getDweller().updateRelationship(DwellerLogic.dwellersByName[dwellerName], change);
             }
 
             Debug.Log(dialogManager.dweller.getDweller().getRelationship(DwellerLogic.dwellersByName[dwellerName]));

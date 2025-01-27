@@ -312,7 +312,7 @@ MonoBehaviour:
     - Target: {fileID: 265500844}
       Score: 80
     - Target: {fileID: 1892728705}
-      Score: -2000
+      Score: -500
     dialogTree:
       Nodes:
       - ID: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
             optionalOriginDweller: 
             change: 0
             hasHappened: 0
-            useOriginDweller: 0
+            useOriginDweller: 1
             enableNewDialog: 1
             nodeIndex: 0
             choiceIndex: 1
@@ -608,7 +608,7 @@ MonoBehaviour:
     - Target: {fileID: 1116849534}
       Score: 80
     - Target: {fileID: 1892728705}
-      Score: -2000
+      Score: -500
     dialogTree:
       Nodes:
       - ID: 0
@@ -639,7 +639,7 @@ MonoBehaviour:
             optionalOriginDweller: 
             change: 0
             hasHappened: 0
-            useOriginDweller: 0
+            useOriginDweller: 1
             enableNewDialog: 1
             nodeIndex: 6
             choiceIndex: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
             optionalOriginDweller: 
             change: 0
             hasHappened: 0
-            useOriginDweller: 0
+            useOriginDweller: 1
             enableNewDialog: 1
             nodeIndex: 0
             choiceIndex: 1
@@ -663,7 +663,7 @@ MonoBehaviour:
             optionalOriginDweller: 
             change: 0
             hasHappened: 0
-            useOriginDweller: 0
+            useOriginDweller: 1
             enableNewDialog: 1
             nodeIndex: 8
             choiceIndex: 0
@@ -1338,7 +1338,7 @@ MonoBehaviour:
     - Target: {fileID: 265500844}
       Score: 100
     - Target: {fileID: 1892728705}
-      Score: -2000
+      Score: -500
     dialogTree:
       Nodes:
       - ID: 0
@@ -2077,7 +2077,7 @@ MonoBehaviour:
     - Target: {fileID: 265500844}
       Score: 50
     - Target: {fileID: 1892728705}
-      Score: -2000
+      Score: -500
     dialogTree:
       Nodes:
       - ID: 0
@@ -2164,7 +2164,8 @@ MonoBehaviour:
           changed] [New dialog unlocked with another dweller]'
         Choices: []
       - ID: 7
-        Text: I don't care for him.
+        Text: He is an alright person. I'd even say I like him. He reminds me of
+          who I was in my early days.
         Choices: []
       - ID: 8
         Text: I think she has something agaisnt me, but I am not sure.
@@ -2174,7 +2175,7 @@ MonoBehaviour:
           Actions:
           - dwellerName: wife
             optionalOriginDweller: 
-            change: -20
+            change: -2000
             hasHappened: 0
             useOriginDweller: 1
             enableNewDialog: 0
@@ -2185,7 +2186,7 @@ MonoBehaviour:
         Text: ' I fear no man, but that thing-- it scares me.'
         Choices: []
       - ID: 10
-        Text: 'Well I''ll be damned. [Relationship changed]'
+        Text: 'Well I''ll be damned. I should vote for her. [Relationship changed]'
         Choices: []
 --- !u!4 &2106607848
 Transform:

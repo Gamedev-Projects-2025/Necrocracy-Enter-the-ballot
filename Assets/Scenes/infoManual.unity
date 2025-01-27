@@ -764,12 +764,11 @@ MonoBehaviour:
   characters:
   - name: The goal of the game
     portrait: {fileID: -1500434286138515679, guid: e6058a95535d27b4bb5f4011ce48a6a3, type: 3}
-    bio: 'Your objective is simple: do not get voted out. Every round, you and your
-      comrades hold a vote to decide who is going to be sacrificed. When someone
-      gets voted out, they die. Your comrades vote based on their relationship with
-      others. The worse the relationship with someone, the more likely they are to
-      vote for that someone. You may change your reputation by drinking, working,
-      or talking with your comrades. FLIP TO THE NEXT PAGE.'
+    bio: "Don\u2019t get voted out. Each round, everyone votes to sacrifice someone,
+      and the person with the most votes dies. Your comrades vote based on their
+      relationships\u2014the worse their opinion of someone, the more likely they\u2019ll
+      vote for them. Improve your reputation by drinking, working, or talking with
+      your comrades. Flip to the next page."
   - name: Interacting with objects
     portrait: {fileID: 6230788792946851344, guid: 0942df64a5571714381a516c5f416965, type: 3}
     bio: Interactable objects will glow bright green when you hover your mouse over
@@ -781,12 +780,10 @@ MonoBehaviour:
       A good comrade explores the bunker diligently!
   - name: Reputation
     portrait: {fileID: -5866704553070124273, guid: 09d52bc492a45f84e81a8b284c8ba6a1, type: 3}
-    bio: Reputation is the most valuable resource in the bunker if you want to ensure
-      your survival. Each of your comrades has opinions of each other, both positive
-      and negative. These opinions are the main factor determining their likelihood
-      of voting for each other. The lower one's opinion of another comrade, the more
-      likely they are to vote for that comrade. Interact and make decisions around
-      the bunker to maintain your reputation.
+    bio: "Reputation is your most valuable resource for survival in the bunker. Your
+      comrades have opinions of each other, and the lower someone\u2019s opinion
+      of another, the more likely they\u2019ll vote for them. To stay safe, interact
+      and make decisions that maintain your reputation."
   - name: Voting
     portrait: {fileID: 4565714610100074678, guid: 9a9381969f511f44f8ce86ed584ed46f, type: 3}
     bio: Click on the ballot box found in the execution chamber to cast your vote
