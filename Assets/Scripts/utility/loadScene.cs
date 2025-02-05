@@ -8,7 +8,7 @@ public class loadScene : MonoBehaviour
     public string sceneName; // Name of the scene to load
     [SerializeField] private float fadeDuration = 0.5f; // Duration of fade
     private Image fadePanel;
-
+    [SerializeField] private bool skip = false;
     private void Awake()
     {
         // Create the fade panel at runtime
@@ -34,7 +34,14 @@ public class loadScene : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneName))
         {
-            StartCoroutine(FadeOutAndLoad());
+            if (skip)
+            {
+                SceneManager.LoadScene(sceneName);
+            }
+            else
+            {
+                StartCoroutine(FadeOutAndLoad());
+            }
         }
     }
 

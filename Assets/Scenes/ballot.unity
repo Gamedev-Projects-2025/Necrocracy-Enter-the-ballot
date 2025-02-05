@@ -2555,6 +2555,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: results
+  fadeDuration: 0
+  skip: 1
 --- !u!4 &873941346
 Transform:
   m_ObjectHideFlags: 0
@@ -3455,6 +3457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: vote
+  fadeDuration: 0
+  skip: 1
 --- !u!4 &1482446878
 Transform:
   m_ObjectHideFlags: 0
